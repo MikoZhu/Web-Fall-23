@@ -18,12 +18,12 @@ HTML forms are essential for interactive web applications, as they allow users t
 
 ### How to Create an HTML Form:
 
-Structure: Use the form element to define the form structure.
-Inputs: Add input elements like input, textarea, and select to collect data.
-Labels: Include label elements to provide context for each input.
-Action Method: Specify the action attribute (where data is sent) and method attribute (how it's sent, like POST or GET).
-Validation: Use attributes like required to ensure essential fields are filled.
-Radio Checkboxes: Utilize input type="radio" and input type="checkbox" for choices.
-Submit Button: Add a button type="submit" to send the form's data.
-Styling: Apply CSS for a visually appealing and user-friendly design.
-Remember: HTML forms facilitate user interaction and data submission, making them a fundamental part of web development.
+- Structure: Use the form element to define the form structure.
+- Inputs: Add input elements like input, textarea, and select to collect data.
+- Labels: Include label elements to provide context for each input.
+- Action Method: Specify the action attribute (where data is sent) and method attribute (how it's sent, like POST or GET).
+- Validation: Use attributes like required to ensure essential fields are filled.
+- Radio Checkboxes: Utilize input type="radio" and input type="checkbox" for choices.
+  Submit Button: Add a button type="submit" to send the form's data.
+- Styling: Apply CSS for a visually appealing and user-friendly design.
+- Remember: HTML forms facilitate user interaction and data submission, making them a fundamental part of web development.
