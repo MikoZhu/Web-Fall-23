@@ -8,13 +8,16 @@
 
 ### Forms Information
 
-What is an HTML Form?
+### What is an HTML Form?
+
 An HTML form is a way to gather information from users on a webpage. It provides a structured way for users to input data, such as text, numbers, choices, and more.
 
-Why Use HTML Forms?
+### Why Use HTML Forms?
+
 HTML forms are essential for interactive web applications, as they allow users to submit data to a server for processing. They enable various actions, from submitting comments to making purchases or signing up for services.
 
-How to Create an HTML Form:
+### How to Create an HTML Form:
+
 Structure: Use the form element to define the form structure.
 Inputs: Add input elements like input, textarea, and select to collect data.
 Labels: Include label elements to provide context for each input.
