@@ -60,7 +60,6 @@ To utilize Emmet abbreviations in VS Code:
 
 1. Start typing an abbreviation, then press `Tab` or `Enter` to expand it.
 2. If there are multiple expansions available, use the arrow keys to select the desired one.
-3. You can also use the "Wrap with Abbreviation" command to surround existing code with an abbreviation.
 
 ## Conclusion
 
