@@ -1,22 +1,122 @@
-<!-- This declaration specifies the document type and version of HTML being used -->
 <!DOCTYPE html>
-
-<!-- This is the opening tag of the HTML document. The "lang" attribute specifies the language of the content (English in this case). -->
 <html lang="en">
-  <!-- This is the opening tag of the head section. The head section contains metadata about the document. -->
   <head>
-    <!-- This tag specifies the character encoding for the document (UTF-8 supports a wide range of characters). -->
     <meta charset="UTF-8" />
-
-    <!-- This tag sets the viewport to adjust the webpage's layout to the device's screen width. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- This tag specifies the title that appears on the browser's tab. -->
     <title>Yoga Application Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
   </head>
-
-  <!-- This is the opening tag of the body section. The body contains the visible content of the webpage. -->
   <body>
-    <!-- The body content will be added here. -->
+    <div class="container">
+      <form action="https://httpbin.org/post" method="post">
+        <!-- Visual Banner -->
+        <div class="banner">
+          <h1>Yoga Application Form</h1>
+        </div>
+        <!-- Date Input -->
+        <div class="form-area">
+          <label for="class-date">Pick a Date</label>
+          <input type="date" name="class-date" id="class-date" />
+        </div>
+        <!-- Text Input -->
+        <div class="form-area">
+          <label for="full-name">Full Name</label>
+          <input
+            type="text"
+            name="full-name"
+            id="full-name"
+            required
+            placeholder="I.E Bill Skarsgard"
+          />
+        </div>
+        <!-- Telephone Input -->
+        <div class="form-area">
+          <label for="telephone">Enter your Telephone</label>
+          <input
+            type="tel"
+            name="telephone"
+            id="telephone"
+            required
+            placeholder="###-###-###"
+          />
+        </div>
+        <!-- Email Input -->
+        <div class="form-area">
+          <label for="email">Enter your Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="johncena@youcantseeme.com"
+          />
+        </div>
+        <!-- Radio Input -->
+        <div class="form-area">
+          <label>Class Times</label>
+          <div class="radio-option">
+            <label for="class-time-1">10 Am</label>
+            <input
+              type="radio"
+              name="class-time"
+              id="class-time-1"
+              value="10am"
+            />
+          </div>
+          <div class="radio-option">
+            <label for="class-time-2">2 Pm</label>
+            <input
+              type="radio"
+              name="class-time"
+              id="class-time-2"
+              value="2pm"
+            />
+          </div>
+          <!-- Select Input -->
+          <div class="form-area">
+            <label for="student-level">Choose a level</label>
+            <select name="student-level" id="student-level">
+              <option disabled selected>Choose level</option>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
+          <!-- Checkbox Input -->
+          <div class="form-area">
+            <label for="extra-items">Extra Items Needed</label>
+            <div class="checkbox-option">
+              <label for="block">Yoga Block</label>
+              <input
+                type="checkbox"
+                name="extra-items"
+                id="block"
+                value="block"
+              />
+            </div>
+            <div class="checkbox-option">
+              <label for="mat">Yoga Mat</label>
+              <input type="checkbox" name="extra-items" id="mat" value="mat" />
+            </div>
+          </div>
+          <!-- Text Area  -->
+          <div class="form-area">
+            <label for="message">Additional Message</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="10"
+              placeholder="Write any additional comments"
+            ></textarea>
+          </div>
+          <!-- Submit Input -->
+          <!-- <input type="button" value="Submit Form" /> -->
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
