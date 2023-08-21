@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://github.com/Technigo/Web-Fall-23">
-    <img src="./assets/imgs/github-banner.png" alt="Fall 23 - Web">
+    <img src="./assets/imgs/banner.svg" alt="Fall 23 - Web">
   </a>
 </h1>
   <p align="center">
