@@ -3,7 +3,7 @@
 // --------------
 // --------------
 // --------------
-// What is Javascriot ?
+// What is Javascript ?
 
 // JavaScript is a programming language that allows web developers to add interactivity and functionality to their websites. It's executed directly in a web browser and enables you to control how elements on a webpage behave and respond to user actions. JavaScript is a crucial tool for creating dynamic and engaging web experiences.
 
