@@ -21,6 +21,7 @@
 // Objects - Container with key-value pairs of collection of data
 
 // IMPORTANT!!!!
-// Showcase the use of the reserved keyword typeof
 // The typeof operator returns a string indicating the type of the operand's value.
 // Is like a detective that helps you figure out what type of thing something is. It tells you if something is a number, a word, a function, or something else. It's like looking at an object and saying, "Hey, what are you?" to understand what kind of thing you're dealing with in your code.
+
+// Examples
