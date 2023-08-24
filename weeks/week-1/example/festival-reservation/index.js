@@ -47,7 +47,7 @@ alert(`You've chosen ${selectedGenre}!`);
 // Concert Slot Reservation
 // Ask the user to select a concert slot based on the chosen genre.
 let concertSlot = "";
-let artistNames = ""; // Initialize an array to store artist names for the selected genre.
+let artistNames; // Initialize an array to store artist names for the selected genre.
 
 // Determine the available concert slots and corresponding artist names.
 switch (selectedGenre) {

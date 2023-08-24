@@ -68,7 +68,6 @@ console.log("-------------------------");
 
 //
 // Non-Primitive Data Types
-
 // Arrays []
 
 // Arrays - Array of Strings
@@ -87,7 +86,6 @@ console.log(["Sweden", 8, true, undefined, null]);
 console.log("-------------------------");
 
 // Object - Logging using log()
-
 // Objects {}
 
 console.log("Objects Example - Using log() method");
