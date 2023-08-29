@@ -42,8 +42,10 @@ console.log("--------");
 // You can select elements from the DOM using various methods, such as getElementById, querySelector, querySelectorAll, getElementsByTagName and getElementsByClassName.
 console.log("Selecting Elements");
 // getElementById
-const byId = document.getElementById("myDiv");
-console.log(byId);
+const byId = document.getElementById("dom-manipulation");
+// getElementByClassName
+const byClass = document.getElementsByClassName("highlight");
+console.log(byClass);
 // querySelector
 const querySelector = document.querySelector(".highlight");
 console.log(querySelector);
@@ -52,7 +54,7 @@ const querySelectorAll = document.querySelectorAll("li");
 console.log(querySelectorAll);
 // getElementsByTagName
 const byTagName = document.getElementsByTagName("h5");
-console.log(byTagName);
+console.log(byTagName[0].innerText);
 // getElementsByClassName
 const elementsByClass = document.getElementsByClassName("box");
 console.log(elementsByClass);
@@ -124,7 +126,7 @@ referenceElement.insertAdjacentElement("afterend", newElementAdjacent);
 
 // Replacing Elements
 // You can replace one element with another using the replaceWith method.
-oldElement = document.querySelector(".old-element");
+let oldElement = document.querySelector(".old-element");
 let newElementReplaced = document.createElement("p");
 newElementReplaced.innerText = "This is a dynamically added paragraph";
 oldElement.replaceWith(newElementReplaced);

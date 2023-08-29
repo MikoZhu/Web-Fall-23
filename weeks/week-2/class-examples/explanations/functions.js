@@ -23,6 +23,7 @@
 // - Modularity: Functions allow you to break down complex tasks into smaller, manageable parts, making your code easier to understand and maintain.
 
 // - Abstraction: Functions hide the implementation details, focusing on what the function does rather than how it does it, which enhances code readability.
+greet();
 
 // -----
 // -----
@@ -35,14 +36,15 @@
 // Function Declaration
 // A function declaration starts with the function keyword followed by the function name and a pair of parentheses. The function body is enclosed in curly braces.
 function greet() {
-  console.log("Hello!");
+  console.log("Hello! - GLOBAL SCOPE");
 }
 
 // Function Expression
 // A function expression involves assigning an anonymous function to a variable. The variable then holds the function and can be used to call it.
-const greetExpression = () => {
-  console.log("Hello!");
+let greetExpression = () => {
+  console.log("Hello! - expression");
 };
+greetExpression();
 
 // Pros and Cons of Function Expressions and Function Declarations
 // Function Declarations
@@ -78,7 +80,10 @@ const greetExpression = () => {
 function greetOneParam(name) {
   console.log(`Hello ${name}!!!`);
 }
-greetOneParam("Alice"); // Output: Hello, Alice!
+greetOneParam("Alice");
+greetOneParam("Diego");
+greetOneParam("Maradona");
+greetOneParam("leo");
 
 function greetTwoParam(name, lastName) {
   console.log(`Hello ${name} ${lastName}!!!`);
@@ -90,23 +95,49 @@ greetTwoParam("Diego", "Zito");
 
 // Using AddEventListenr
 const button = document.querySelector("#myButton");
-button.addEventListener("click", () => {
-  console.log();
-  alert("Button clicked!");
-});
+// HARDER WAY TO WORK WITH THIS EVENTLISTENER
+// button.addEventListener("click", () => {
+//   alert("hello Class");
+// });
+
+// EASIER WAY BY BREAKING DOWN THE COMPLEXITY
+const alertMe = (event) => {
+  console.log(event);
+  alert("Hello Class");
+};
+
+button.addEventListener("click", alertMe);
 
 // Inline dependency
 const showMessage = () => {
   alert("Button Click through inlineLogic");
-};
 
+  const stenli = () => {
+    console.log("Hello");
+  };
+
+  return stenli;
+};
+showMessage();
+// stenli();
 // onclick Direct Event Handler
 const buttonTwo = document.getElementById("myButtonTwo");
 const showMessageTwo = () => {
   alert("Button Click through event handler");
 };
-buttonTwo.onclick = showMessageTwo;
+function showMessageThree() {
+  alert("Button Click through event handler");
+}
+buttonTwo.onclick = showMessageThree;
 
+// FUnction with event parameter allocation
+let submitBtn = document.querySelector("#submit");
+
+function eventHandlerParameter(event) {
+  event.preventDefault();
+  console.log(event);
+}
+submitBtn.addEventListener("click", eventHandlerParameter);
 // -----
 // -----
 // -----
