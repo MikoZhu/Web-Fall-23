@@ -111,15 +111,8 @@ button.addEventListener("click", alertMe);
 // Inline dependency
 const showMessage = () => {
   alert("Button Click through inlineLogic");
-
-  const stenli = () => {
-    console.log("Hello");
-  };
-
-  return stenli;
 };
-showMessage();
-// stenli();
+
 // onclick Direct Event Handler
 const buttonTwo = document.getElementById("myButtonTwo");
 const showMessageTwo = () => {
