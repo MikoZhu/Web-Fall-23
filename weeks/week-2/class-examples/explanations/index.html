@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 2 - Explanations</title>
+    <style>
+      .my-dynamically-created-class {
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="dom-manipulation">
+      <div id="myDiv">
+        <p>Container with ID myDiv</p>
+      </div>
+      <div class="highlight">
+        <p>Container with class highlight</p>
+      </div>
+      <div>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </div>
+      <div>
+        <h5>heading 05</h5>
+        <h5>heading 05</h5>
+        <h5>heading 05</h5>
+      </div>
+      <div>
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+      </div>
+    </section>
+    <div class="old-element">
+      <p>Hello There :)</p>
+    </div>
+    <div class="removed-element">
+      <p>This paragraph is never shown because is removed through jS</p>
+    </div>
+    <button id="myButton">Click Me - event listener</button>
+    <button onclick="showMessage()">Click Me - onclick</button>
+    <button id="myButtonTwo">Click Me - event handler</button>
+
+    <script src="dom.js"></script>
+    <!-- <script src="functions.js"></script> -->
+  </body>
+</html>
