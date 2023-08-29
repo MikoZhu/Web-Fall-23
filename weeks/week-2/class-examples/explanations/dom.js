@@ -19,6 +19,7 @@ console.log(document.head);
 console.log(document.body);
 console.log(document.all);
 console.log(document.all[8]);
+
 console.log(window); // The WOM refers to the global object provided by a web browser environment, often referred to as the window object. The window object represents the browser window or the global context in which JavaScript code runs.
 
 console.log("--------");
