@@ -116,18 +116,18 @@ function createProductRow(name, price) {
   const newRow = document.createElement("tr");
   newRow.className = "product";
   newRow.innerHTML = `
-      <td class="name">
-        <span>${name}</span>
-      </td>
-      <td class="price">$<span>${price}</span></td>
-      <td class="quantity">
-        <input type="number" value="0" min="0" required placeholder="Quantity" />
-      </td>
-      <td class="subtotal">$<span>0.00</span></td>
-      <td class="action">
-        <button class="btn btn-remove">Remove</button>
-      </td>
-    `;
+          <td class="name">
+            <span>${name}</span>
+          </td>
+          <td class="price">$<span>${price}</span></td>
+          <td class="quantity">
+            <input type="number" value="0" min="0" required placeholder="Quantity" />
+          </td>
+          <td class="subtotal">$<span>0.00</span></td>
+          <td class="action">
+            <button class="btn btn-remove">Remove</button>
+          </td>
+        `;
   return newRow;
 }
 
