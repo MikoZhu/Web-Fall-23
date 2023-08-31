@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 2 - Q&A</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap");
+      body {
+        margin: 0;
+        padding: 2em;
+        font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
+      section {
+        outline: 1px solid red;
+        padding: 1em;
+        margin: 1em 0;
+      }
+
+      img {
+        width: 80%;
+      }
+      .question {
+        font-weight: 900;
+      }
+
+      /* Custom Checkbox */
+    </style>
+  </head>
+  <body>
+    <h1>Week 2 - Q&A</h1>
+    <section>
+      <p class="question">Question</p>
+      <p>I cannot understand what a closuers is. Can you explain it?</p>
+      <p class="question">Answer</p>
+      <p>
+        A closure in programming refers to a function that retains access to its
+        outer scope's variables even after the outer function has finished
+        executing. In simpler terms, it's like a function with a memory of the
+        environment in which it was created.
+      </p>
+      <p><strong>What is "Environment" in the Context of Closures?</strong></p>
+      <p>
+        When we talk about a function's "environment" in the context of
+        closures, we're referring to the surroundings or conditions in which the
+        function was created. Specifically, this means:
+      </p>
+      <ul>
+        <li>
+          Variables: Any variables that were available and in scope when the
+          function was defined.
+        </li>
+        <li>
+          Functions: Any other functions that were in scope when our function
+          was defined.
+        </li>
+        <li>Parameters: Any parameters of the outer function.</li>
+      </ul>
+      <p>
+        In essence, the "environment" is like the backdrop or setting where the
+        function was born. Just like how a person might remember their childhood
+        home, a closure "remembers" the environment where it was created.
+      </p>
+      <p><strong>How do closures work</strong></p>
+      <p>
+        When a function is defined inside another function, it forms a closure
+        by "remembering" the environment in which it was created. This
+        environment includes any local variables, parameters, and other inner
+        functions. This "memory" is retained even after the outer function
+        completes its execution.
+      </p>
+      <p>Example</p>
+      <p>Take a look into closure.js</p>
+      <button id="myButton">Click Me</button>
+      <button id="myButtonTwo">Say Hello</button>
+      <p>
+        If you want to learn by an analogy, check out the file
+        closure-analogy.js
+      </p>
+    </section>
+    <section>
+      <p class="question">Question</p>
+      <p>
+        Speaking in code? Is it a skill which we develope throughout the
+        bootcamp (underlying in the process) i.e. the more we learn, the more we
+        can speak code or do I have to take on a side hobby to learn speaking
+        code? Any tips?
+      </p>
+      <p class="question">Answer</p>
+      <p>
+        Speaking in code" typically refers to the ability to discuss, describe,
+        and communicate ideas, problems, and solutions using programming
+        concepts, terminologies, and sometimes even pseudo-code or actual code
+        snippets. It's an essential skill for developers, especially when
+        collaborating with others.
+      </p>
+      <p><strong>Is it a skill developed throughout at Technigo? </strong></p>
+      <p>Yes</p>
+      <p>
+        <strong>Do you need a side hobby to learn to speak in code? </strong>
+      </p>
+      <p>
+        <a
+          href="https://www.sjsu.edu/people/john.estill/courses/158-s15/10000%20Hour%20Rule%20Gladwell.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          >No but, it's directly corelated with the input you apply to it ;)
+        </a>
+      </p>
+      <p><strong>Tips?</strong></p>
+      <ul>
+        <li>Practice: Just as with coding itself, practice is key.</li>
+        <li>
+          Engage in Code Reviews: Actively participate in code reviews, both as
+          a reviewer and a reviewee.
+        </li>
+        <li>
+          Pseudo-code: Before diving into coding, try writing out the logic in
+          pseudo-code. It's a simplified, often plain-English version of the
+          logic you want to implement. This practice can help you think through
+          problems and articulate solutions more clearly.
+        </li>
+        <li>Stay Curious</li>
+        <li>Engage with the Community</li>
+        <li>
+          Instagram has shifted to a more educational content based since tiktok
+          so its a cool tool as well. Look up specific tags like "js"
+          "javascript" "html" "css" "react" and soon you will train your
+          algorithim to feed you accts give you tips and examples
+        </li>
+        <li>YOUTUBE is king</li>
+      </ul>
+    </section>
+    <section>
+      <p class="question">Question</p>
+      <p>
+        I am not sure, if there is a situation in which I need an event handler
+        and a parameter in one function. Is there any case like that? If so, how
+        to pass a parameter to an event handler?
+      </p>
+      <p class="question">Answer</p>
+      <p>
+        Yes, there are situations where you might want to pass additional
+        parameters to an event handler. For instance, if you have a generic
+        function that handles events for multiple elements and you want to
+        differentiate the behavior based on which element was clicked, or if you
+        want to pass some additional data to the function.
+      </p>
+      <p>
+        Let's take a look at the provided folder called
+        <strong>events-params-q</strong>
+      </p>
+    </section>
+    <section>
+      <p class="question">Question?</p>
+      <p>Do we need to use strict mode?</p>
+      <p class="question">Answer</p>
+      <p>Yes</p>
+      <p><strong>Why?</strong></p>
+      <p>
+        Imagine you're playing a game, and there are two modes: Casual Mode and
+        Strict Mode.
+      </p>
+      <ul>
+        <li>
+          In Casual Mode, the game is forgiving. If you make a small mistake or
+          do something not exactly right, the game lets it slide. It's
+          easy-going.
+        </li>
+        <li>
+          In Strict Mode, the game is less forgiving. If you make a mistake or
+          don't follow the rules exactly, the game will immediately let you
+          know. It's more disciplined.
+        </li>
+      </ul>
+      <p>
+        In JavaScript, "strict mode" is like the second mode of the game. It
+        makes the language stricter. If you write code that's a bit sloppy or
+        uses some bad practices, JavaScript in strict mode will point it out by
+        throwing errors or warnings.
+      </p>
+      <p><strong>Is it recommended for beginners? Why? </strong></p>
+      <p>Yes, it's recommended, especially for beginners. Here's why:</p>
+      <ul>
+        <li>
+          Catches Common Mistakes: Strict mode helps catch common coding
+          mistakes that might otherwise be ignored. For a beginner, this is
+          valuable feedback to learn the right way to code.
+        </li>
+        <li>
+          Prevents Bad Practices: There are some features in JavaScript that can
+          be confusing or lead to errors. Strict mode restricts or throws errors
+          for these, guiding beginners away from potential pitfalls.
+        </li>
+        <li>
+          Safer Code: Code written in strict mode is generally safer, making it
+          less prone to bugs and issues.
+        </li>
+      </ul>
+      <p>
+        <strong
+          >To use strict mode, simply add the line 'use strict'; at the top of
+          your JavaScript file or script. It's a small step that can make a big
+          difference in the quality of your code.</strong
+        >
+      </p>
+    </section>
+    <section>
+      <p class="question">Question</p>
+      <p>How can I set outline color for costum checkbox element to default?</p>
+      <p class="question">Answer</p>
+      <p>
+        Let's break down the provided code to understand the structure and
+        styling of the custom checkbox.
+      </p>
+      <p>
+        <a
+          href="https://codepen.io/technigo/pen/bGOeGag"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Codepen</a
+        >
+      </p>
+    </section>
+    <section>
+      <p class="question">Question</p>
+      <p>
+        Could you do a short explanation of the console again please? When to
+        use it, how and why?
+      </p>
+      <p class="question">Answer</p>
+      <p><strong>What is console.log()? </strong></p>
+      <p>
+        In JavaScript, console.log() is a method that outputs information to the
+        web browser's console. It's a part of the console object, which provides
+        access to the browser's debugging conso
+      </p>
+      <p><strong>How to Use console.log()? </strong></p>
+      <p>Let's take a look at the console.js file</p>
+      <p><strong>When to Use console.log()?</strong></p>
+      <ul>
+        <li>
+          <strong>Debugging:</strong> It's a quick and simple way to check the
+          value of variables, the flow of code, or the output of functions
+          during development.
+        </li>
+        <li>
+          <strong>Learning:</strong> When learning JavaScript, it's useful to
+          see the results of your code immediately. console.log() provides
+          instant feedback.
+        </li>
+        <li>
+          <strong>Monitoring:</strong> In more advanced scenarios, you might use
+          it to monitor certain events or behaviors in your code, especially
+          when other debugging tools might be overkill or not available.
+        </li>
+      </ul>
+
+      <p><strong>Why Use console.log()?</strong></p>
+      <ul>
+        <li>
+          <strong>Simplicity:</strong> It's straightforward and doesn't require
+          any setup.
+        </li>
+        <li>
+          <strong>Universality:</strong> It works in all major browsers and
+          JavaScript environments, like Node.js.
+        </li>
+        <li>
+          <strong>Flexibility:</strong> You can log strings, numbers, objects,
+          arrays, and more. It can also be used with string interpolation or
+          template literals for more complex outputs.
+        </li>
+      </ul>
+    </section>
+    <section>
+      <p class="question">Question</p>
+      <p>
+        Can you have multiple events when you use "addEventListener"? For
+        instance, when we have a form, the user can choose to press "enter" on
+        the keyboard or press "submit" button to submit an answer.
+      </p>
+      <p class="question">Answer</p>
+      <p>answer here...</p>
+      <div>
+        <button id="myButtonEvent">Click Me!</button>
+        <form id="myForm">
+          <input type="text" placeholder="Type something..." />
+          <input type="submit" value="Submit" />
+        </form>
+        <div
+          id="hoverDiv"
+          style="width: 100px; height: 100px; background-color: lightgray"
+        >
+          Hover over me
+        </div>
+        <button id="myButtonEventTwo">Click Me!</button>
+      </div>
+    </section>
+    <section>
+      <p class="question">Question</p>
+      <p>
+        What's the difference between innerHTML, innerText and textContent and
+        when do I use what?
+      </p>
+      <p class="question">Answer</p>
+      <ul>
+        <li>Use innerHTML when dealing with HTML content.</li>
+        <li>Use innerText when you want only the visible text.</li>
+        <li>Use textContent when you want all the text, visible or not.</li>
+      </ul>
+      <div>
+        <p><strong>Examples</strong></p>
+        <p>Connect to <strong>inner.js</strong></p>
+        <section>
+          <p><strong>Using innerHTML when dealing with HTML content:</strong></p>
+        <div id="htmlExample">This is a <strong>test</strong>.</div>
+        <button onclick="modifyHTMLContent()">Modify HTML Content</button>
+        <p>When you click the button, the content of the div will change, and the new content will include an <em> tag.</p>
+        </section>
+        <section>
+          <p><strong>Using innerText when you want only the visible text:
+          </strong></p>
+          <div id="textExample" style="display: none;">This text is hidden.</div>
+          <button onclick="showVisibleText()">Show Visible Text</button>
+          <p>When you click the button, the alert will show an empty string because the text inside the div is hidden using CSS, and innerText only considers visible text.</p>
+        </section>
+        <section>
+          <p><strong>Using textContent when you want all the text, visible or not:
+          </strong></p>
+          <div id="contentExample" style="display: none;">This text is also hidden.</div>
+          <button onclick="showAllText()">Show All Text</button>    
+          <p>When you click the button, the alert will show "This text is also hidden." even though the text inside the div is hidden using CSS. This is because textContent gets all the text, regardless of its visibility.</p>
+        </section>
+      </div>
+    </section>
+    <section>
+      <p class="question">Question</p>
+      <p>Should I always try to use arrow functions or are there situations where the traditional function's syntax is better?</p>
+      <p class="question">Answer</p>
+      <p> <strong>Start with Function Declarations:</strong></p>
+      <ul>
+        <li><strong>Familiarity</strong>: For those new to JavaScript, function declarations are more familiar and are often introduced early in learning materials.</li>
+        <li><strong>Clarity</strong>: Function declarations make it clear you're defining a function, enhancing readability, especially for beginners.</li>
+      </ul>
+      <p><strong>Consider Switching to Arrow Functions:</strong></p>    
+       <ul>
+        <li><strong>Conciseness</strong>: Arrow functions offer a shorter syntax, especially for small functions or callbacks.</li>
+        <li><strong>Modern Code</strong>: Arrow functions are frequently used in modern JavaScript frameworks and libraries, making your code feel updated.</li>
+       </ul>
+    </section>
+    <section>
+      <p class="question">Question</p>
+      <p>"I don't understand this line in the code that was provided in the chat bot project: 
+        event.preventDefault();
+        What does it do?"</p>
+      <p class="question">Answer</p>
+      <p>The event.preventDefault() method stops the default action of an event from happening. When you have an event listener on an element, and that event is triggered, the browser will often have a default behavior associated with that event. By calling event.preventDefault(), you're telling the browser, "Don't do your default thing."</p>
+      <p>Take a look at <strong>preventDefault.js</strong></p>
+    </section>
+    <section>
+      <p class="question">Question</p>
+      <p>Could I put the bot questions and answers in an array? Would that make sense?</p>
+      <p class="question">Answer</p>
+      <p>Yes you can :)</p>
+    </section>
+   
+    <!-- <script src="inner.js" defer></script> -->
+  </body>
+</html>

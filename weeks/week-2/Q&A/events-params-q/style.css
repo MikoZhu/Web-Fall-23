@@ -1,0 +1,30 @@
+body {
+  /* display: flex; */
+  /* justify-content: center; */
+  margin-top: 50px;
+  gap: 50px;
+}
+.hej {
+  height: 40px;
+  width: 40px;
+  background: red;
+}
+
+.box {
+  width: 100%;
+  height: 300px;
+  background-color: orange;
+}
+
+button {
+  border: none;
+  width: 40px;
+  padding: 5px;
+}
+
+button:hover {
+  transform: translateY(2px);
+}
+
+form {
+}
