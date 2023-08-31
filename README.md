@@ -13,5 +13,5 @@
  Quote of the class
 </p>
 <p align="center" style="font:16px; font-style:italic">
- Only the educated are free  - EpictetusSSSS
+ Only the educated are free  - Epictetus
 </p>
