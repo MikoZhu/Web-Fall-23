@@ -2,10 +2,10 @@ const button = document.getElementById("myButtonEvent");
 const form = document.getElementById("myForm");
 const hoverDiv = document.getElementById("hoverDiv");
 
-// button.addEventListener("click", function () {
-//   console.log("alert");
-//   alert("Button was clicked!");
-// });
+button.addEventListener("click", function () {
+  console.log("alert");
+  alert("Button was clicked!");
+});
 
 form.addEventListener("submit", function (e) {
   e.preventDefault(); // Prevents the form from actually submitting and refreshing the page

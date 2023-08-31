@@ -5,6 +5,7 @@ const hejBtn = document.querySelector(".hej-btn");
 const helloBtn = document.querySelector(".hello-btn");
 
 function changeMe(event, color) {
+  console.log(event);
   event.preventDefault();
   box.style.backgroundColor = color;
 }
