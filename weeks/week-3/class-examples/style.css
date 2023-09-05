@@ -9,6 +9,10 @@ p {
 .card {
   width: 200px;
   display: inline-block;
+  vertical-align: text-top;
+  background: rgb(241, 193, 193);
+  border-radius: 16px;
+  border: 2px solid rgb(222, 157, 157);
 }
 
 .card img {
