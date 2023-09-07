@@ -39,8 +39,12 @@ const DOGS = [
   }
 ]
 
+const faveDogs = []
+
 const container = document.getElementById('container')
+const favorites = document.getElementById('favorites')
 const filterDropdown = document.getElementById('filterDropdown')
+
 
 const loadDogs = (dogArray) => {
   container.innerHTML = ''
@@ -48,6 +52,7 @@ const loadDogs = (dogArray) => {
     container.innerHTML += `
       <div class="card">
         <p>${dog.name}</p>
+        <button onclick="addToFaves('${dog.name}')">Add to favorites</button>
         <img src=${dog.img} alt=${dog.name}>
         <p>${dog.puppy ? 'PUPPY' : ''}</p>
       </div>
@@ -56,6 +61,7 @@ const loadDogs = (dogArray) => {
 }
 
 const filterDogs = () => {
+  console.log('calling the filterDogs function')
   const value = filterDropdown.value
 
   if (value === 'all') {
@@ -65,6 +71,20 @@ const filterDogs = () => {
     loadDogs(filteredList)
   }
 
+}
+
+const addToFaves = (dog) => {
+  faveDogs.push(dog)
+  loadFaves()
+}
+
+const loadFaves = () => {
+  favorites.innerHTML = ''
+  faveDogs.forEach((dog) => {
+    favorites.innerHTML += `
+        <p>${dog}</p> 
+    `
+  })
 }
 
 filterDropdown.addEventListener('change', filterDogs)
