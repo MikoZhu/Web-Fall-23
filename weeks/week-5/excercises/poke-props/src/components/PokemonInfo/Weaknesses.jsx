@@ -10,3 +10,7 @@ export const Weaknesses = ({ weaknesses }) => {
     </div>
   );
 };
+
+Weaknesses.defaultProps = {
+  weaknesses: "Pokemon weaknesse(s) are missing",
+};
