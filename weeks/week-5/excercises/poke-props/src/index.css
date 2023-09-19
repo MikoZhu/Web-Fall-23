@@ -1,0 +1,49 @@
+body {
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* General Styles */
+span {
+  font-weight: bold;
+  display: block;
+}
+
+/* Header CSS */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: blue;
+  padding: 1em 0em;
+  color: white;
+}
+
+header img {
+  width: 20%;
+}
+
+/* Explanation CSS */
+.explanation {
+  padding: 2em;
+}
+
+/* Pokemon Component CSS */
+.pokemon-outer {
+  padding: 2em;
+}
+.pokemon {
+  border: solid red 1px;
+  padding: 1em;
+  margin-bottom: 1em;
+}
