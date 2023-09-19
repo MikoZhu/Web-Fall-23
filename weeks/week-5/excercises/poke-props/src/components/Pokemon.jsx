@@ -31,3 +31,8 @@ export const Pokemon = ({
     </div>
   );
 };
+
+Pokemon.defaultProps = {
+  name: "Pokemon Name is Missing",
+  weight: "No Pokemon has been selected",
+};

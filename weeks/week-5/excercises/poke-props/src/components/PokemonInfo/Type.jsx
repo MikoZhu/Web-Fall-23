@@ -10,3 +10,7 @@ export const Type = ({ types }) => {
     </div>
   );
 };
+
+Type.defaultProps = {
+  types: "Pokemon Type(s) are missing",
+};

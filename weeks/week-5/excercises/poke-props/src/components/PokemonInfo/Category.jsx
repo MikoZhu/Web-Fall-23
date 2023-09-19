@@ -6,3 +6,7 @@ export const Category = ({ category }) => {
     </div>
   );
 };
+
+Category.defaultProps = {
+  category: "Pokemon category is missing",
+};
