@@ -6,7 +6,7 @@ export const QuestionSeven = ({ title, number }) => {
       {
         id: 1,
         title: "For example, if your project is about music, you might run:",
-        point: `npm init vite@latest my-music-project --template react`,
+        point: `npm init vite@latest my-music-project`,
       },
       {
         id: 2,

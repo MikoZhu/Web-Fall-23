@@ -13,7 +13,7 @@ export const QuestionOne = ({ title, number }) => {
           <p>{content.context}</p>
           {/* This does not create extra wrapping elements that are not needed */}
           <>
-            <p>inspect element on browser</p>
+            <p>inspect element on browser --- WITHIN REACT FRAGMENT</p>
           </>
           {/* This creates an extra empty div that is harder to read on the long run */}
           <div>

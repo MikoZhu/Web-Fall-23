@@ -52,7 +52,9 @@ export const QuestionNine = ({ title, number }) => {
           <>
             <p>This is the result of the jsx logic</p>
             {objArray.map((item, index) => (
-              <p key={index}>{item}</p>
+              <p key={item}>
+                {item} - {index}
+              </p>
             ))}
           </>
         </>

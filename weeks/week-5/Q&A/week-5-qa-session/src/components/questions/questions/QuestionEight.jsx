@@ -1,4 +1,5 @@
-// import jsonData from './data.json'; // Example of importing a json object into the file, but it does not exist
+//import jsonData from "./data.json"; // Example of importing a json object into the file, but it does not exist
+import { Test, TestTwo, TestThree } from "./Test";
 export const QuestionEight = ({ title, number }) => {
   const content = {
     context:
@@ -35,6 +36,9 @@ export const QuestionEight = ({ title, number }) => {
             </ul>
           ))}
         </>
+        <Test />
+        <TestTwo />
+        <TestThree />
       </details>
     </div>
   );

@@ -40,9 +40,15 @@ export const QuestionZero = ({ title, number }) => {
           <>
             {content.bulletpoints.map((bulletPoint, index, array) => {
               console.log(array); // This will log the entire array for each iteration
+              // NEVER USE THE DAMN IndEX IN YOUR KEY PROP, BIG NO NO!
+              // WIll get slapped in the hands!
+              // ALWAYS USE A UN UnIQUE IDENTIFIER
               return (
                 <ul key={bulletPoint.id}>
-                  <h4>{bulletPoint.title}</h4>
+                  <h4>
+                    <strong>{index} - </strong>
+                    {bulletPoint.title}
+                  </h4>
                   <li>{bulletPoint.point}</li>
                 </ul>
               );
