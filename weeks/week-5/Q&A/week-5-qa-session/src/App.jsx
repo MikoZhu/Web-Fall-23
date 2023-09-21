@@ -2,6 +2,7 @@ import { QuestionDistributive } from "./components/questions/QuestionDistributiv
 export const App = () => {
   return (
     <>
+      <h3 className="app-heading">Question Set</h3>
       <QuestionDistributive />
     </>
   );

@@ -82,3 +82,7 @@ button:focus-visible {
     font-size: 0.6em;
   }
 }
+
+.app-heading {
+  text-align: center;
+}
