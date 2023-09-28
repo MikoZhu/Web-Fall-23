@@ -5,7 +5,7 @@ export const QuestionSix = ({ title, number, count, setCount }) => {
   };
 
   // Logic to receive prop data which is a number from parent and add here through this function - *2
-  const countPlusOne = () => setCount(count * 2);
+  const countMultiplyTwo = () => setCount(count * 2);
   return (
     <div className="question-outer-container">
       <details>
@@ -15,7 +15,9 @@ export const QuestionSix = ({ title, number, count, setCount }) => {
         <>
           <p>{content.context}</p>
         </>
-        <button onClick={countPlusOne}>Counnt + 1 - Count is: {count}</button>
+        <button onClick={countMultiplyTwo}>
+          Counnt *2 - Count is: {count}
+        </button>
       </details>
     </div>
   );

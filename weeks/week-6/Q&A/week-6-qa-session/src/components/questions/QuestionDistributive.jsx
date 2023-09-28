@@ -55,7 +55,7 @@ export const QuestionDistributive = () => {
     {
       id: 6,
       title:
-        "useState - Should we use it in all components or only in app.jsx ? Or this is depend? - Counter - +2 - SAME REACTIVE VARIABLE AS QUESTION ABOVE :)",
+        "useState - Should we use it in all components or only in app.jsx ? Or this is depend? - Counter - *2 - SAME REACTIVE VARIABLE AS QUESTION ABOVE :)",
       context:
         "The student is inquiring about the best practices for placing state in React components, specifically if useState should be used in all components or just in the top-level component like App.jsx.",
     },

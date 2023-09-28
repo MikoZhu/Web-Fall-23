@@ -7,19 +7,12 @@ export const QuestionTwo = ({ title, number, question, onAnswerSubmit }) => {
     bulletpoints: [
       {
         id: 1,
-        title: "In short - npm install",
-        point: `- npm install: Installs necessary packages. - only once to install all needed packages to start the  dev server and start working. Remember as well that this command will generate your node_modules folder + package-lock.json file.
-           
-          `,
-      },
-      {
-        id: 2,
         title: "Why?",
         point:
           "React enforces this because, without the multiple attribute, a <select> element can only have one selected option at a time. If you provide an array as the value, React gets confused about which option to show as selected, hence the warning.",
       },
       {
-        id: 3,
+        id: 2,
         title: "To fix this, you have two options:",
         point: ` - you intend to allow multiple selections, add the multiple attribute to the <select> element and continue using an array for the value prop.
             ----- If you only want a single selection, ensure that the value prop receives a scalar value (like a string or number) instead of an array.
