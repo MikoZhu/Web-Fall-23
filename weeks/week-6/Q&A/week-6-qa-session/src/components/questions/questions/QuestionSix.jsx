@@ -1,8 +1,11 @@
-export const QuestionSix = ({ title, number }) => {
+export const QuestionSix = ({ title, number, count, setCount }) => {
   const content = {
     context:
-      "In React, you typically don't need to manually add 'use strict' because the build tools like Create React App or Vite automatically include it in the transpiled code to enforce stricter parsing and error handling on your JavaScript code. Remember that we are using vite because is a modern and faster approach ;)",
+      "This button multiplies by 2 the count variable placed above which is the concept of top-level state",
   };
+
+  // Logic to receive prop data which is a number from parent and add here through this function - *2
+  const countPlusOne = () => setCount(count * 2);
   return (
     <div className="question-outer-container">
       <details>
@@ -12,6 +15,7 @@ export const QuestionSix = ({ title, number }) => {
         <>
           <p>{content.context}</p>
         </>
+        <button onClick={countPlusOne}>Counnt + 1 - Count is: {count}</button>
       </details>
     </div>
   );
