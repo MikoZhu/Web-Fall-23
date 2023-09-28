@@ -89,7 +89,7 @@ export const QuestionDistributive = () => {
     alert(`You answered: ${answer}`);
   };
 
-  // QUestion 5&6 Top level state data example
+  // Question 5&6 Top level state data example
   // Counter
   const [count, setCount] = useState(0);
 
