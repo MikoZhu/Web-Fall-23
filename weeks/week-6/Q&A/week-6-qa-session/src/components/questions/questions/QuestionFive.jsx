@@ -39,6 +39,7 @@ export const QuestionFive = ({ title, number, count, setCount }) => {
     ],
   };
 
+  // Logic to receive prop data which is a number from parent and add here through this function - +1
   const countPlusOne = () => setCount(count + 1);
   return (
     <div className="question-outer-container">
