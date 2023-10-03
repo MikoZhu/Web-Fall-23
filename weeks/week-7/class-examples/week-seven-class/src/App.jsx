@@ -3,7 +3,6 @@ import { ExampleOne } from "./components/ExampleOne";
 import { ExampleTwo } from "./components/ExampleTwo";
 import { ExampleThree } from "./components/ExampleThree";
 import { ExampleFour } from "./components/ExampleFour";
-import { Distributive } from "./components/Twitter/Distributive";
 
 export const App = () => {
   return (
@@ -16,7 +15,6 @@ export const App = () => {
         <ExampleTwo />
         <ExampleThree />
         <ExampleFour />
-        <Distributive />
       </div>
     </>
   );
