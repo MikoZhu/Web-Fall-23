@@ -10,7 +10,7 @@ export const SingleMessage = () => {
 // It's a POST method :)
 
 // Here is a hint of that function :)
-// const onLikeIncrease = () => {
+// const onLikeIncrease = async () => {
 //   // Defining options for the fetch API call, specifying that the method should be "POST"
 //   // PROMISE LAND;)
 //   // - Making a POST request to the API to like a message, using the message's `_id` property to target the correct message

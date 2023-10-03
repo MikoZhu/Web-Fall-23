@@ -21,7 +21,7 @@ export const PostMessage = ({ newMessage, fetchPosts }) => {
   }, [newPost]); // Dependency array includes `newPost`, so the effect runs when `newPost` changes
 
   // Declaring a function `handleFormSubmit` to handle form submission
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     // Preventing the default form submission behavior
     event.preventDefault();
     // Logging the current `newPost` value for debugging
@@ -46,7 +46,10 @@ export const PostMessage = ({ newMessage, fetchPosts }) => {
       };
 
       // Making a POST request to the API endpoint with the configured options
-      fetch("https://happy-thoughts-ux7hkzgmwa-uc.a.run.app/thoughts", options)
+      await fetch(
+        "https://happy-thoughts-ux7hkzgmwa-uc.a.run.app/thoughts",
+        options
+      )
         .then((response) => response.json()) // Parsing the response as JSON
         .then((data) => {
           // Calling `newMessage` function (passed as prop) with the parsed data
