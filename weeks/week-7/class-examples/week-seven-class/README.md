@@ -10,6 +10,8 @@ Imagine you have a robot (your React component). This robot can do special tasks
 
 In class components, lifecycle methods like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` manage side effects. However, managing related logic scattered across different lifecycle methods can be cumbersome and less intuitive. `useEffect` consolidates these lifecycles, providing a unified API to handle side effects in a more organized and clear manner, especially in functional components.
 
+Components need to perform side effects to interact with things outside of them (like APIs, timers, or manual DOM manipulations) and manage external changes that need to reflect in the UI, ensuring a seamless and dynamic user experience by responding to both user interactions and data changes efficiently. The useEffect hook in React provides a clean and concise way to encapsulate and handle these side effects, aligning them with the component lifecycle for optimal performance and maintainability.
+
 Think of useEffect as a friendly robot in a painting game. Every time you paint something (update your component), the robot can sprinkle glitter (a "side effect") on the painting. In older games, you needed different robots to sprinkle glitter when you start painting, while painting, or when you finish. This was a bit chaotic! But useEffect is a smart robot that knows when to sprinkle the glitter at the right times all by itself, making your painting game (or managing your component) much easier and more organized!
 
 #### How Does `useEffect` Work?
