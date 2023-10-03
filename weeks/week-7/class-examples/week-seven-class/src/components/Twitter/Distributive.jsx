@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 // Importing `PostMessage` and `MessageList` components from respective files
 import { PostMessage } from "./components/PostMessage";
-import { MessageList } from "./components/Messagelist";
 
 // Declaring a functional component named `Distributive`
 export const Distributive = () => {
@@ -43,13 +42,6 @@ export const Distributive = () => {
     <div className="main-wrapper">
       {/* Rendering `PostMessage` component and passing `addNewPost` and `fetchPosts` as props */}
       <PostMessage newMessage={addNewPost} fetchPosts={fetchPosts} />
-      {/* Rendering `MessageList` component and passing `loading`, `messageList`, `setMessageList`, and `fetchPosts` as props */}
-      <MessageList
-        loading={loading}
-        messageList={messageList}
-        setMessageList={setMessageList}
-        fetchPosts={fetchPosts}
-      />
     </div>
   );
 };
