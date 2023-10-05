@@ -42,7 +42,7 @@ export const QuestionTwo = ({ title, number }) => {
         <summary>
           {number} - {title}
           <a
-            href="https://github.com/Technigo/happy-thoughts-demo/blob/main/code/src/components/PostMessage.jsx"
+            href="https://github.com/Technigo/Web-Fall-23/blob/main/weeks/week-7/class-examples/week-seven-class/src/components/Twitter/components/PostMessage.jsx"
             target="_blank"
             rel="noopener noreferrer"
           >
