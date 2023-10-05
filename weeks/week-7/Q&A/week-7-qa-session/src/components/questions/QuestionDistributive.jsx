@@ -58,7 +58,8 @@ export const QuestionDistributive = () => {
       id: 6,
       title:
         "Could we have a quick run through of the syntax for a fetch request using POST. Does it change for different data types? (refering to the line  JSON.stringify, can I use this for numbers? or does everything convert into a JSON string? ). Going back to Week 4 content was helpful, but, I'm having trouble coding the correct syntax to update the hearts in this project. Using 'await' and 'async'  has also confused me as I never used it in the Weather App. Why do we now use it here? Thank you!!!!",
-      context: "",
+      context:
+        "This question relates to understanding the syntax for a POST fetch request in React, handling different data types with JSON.stringify, and the usage of 'async' and 'await' in JavaScript.",
     },
     {
       id: 7,
