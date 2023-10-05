@@ -8,6 +8,8 @@ import { QuestionFive } from "./questions/QuestionFive";
 import { QuestionSix } from "./questions/QuestionSix";
 import { QuestionSeven } from "./questions/QuestionSeven";
 import { QuestionEight } from "./questions/QuestionEight";
+import { QuestionNine } from "./questions/QuestionNine";
+import { QuestionTen } from "./questions/QuestionTen";
 
 export const QuestionDistributive = () => {
   const questions = [
@@ -72,6 +74,19 @@ export const QuestionDistributive = () => {
       context:
         "This question relates to the strategic use of React’s useState and useEffect hooks to manage component state and side effects, especially in scenarios involving data fetching and responding to user actions, such as button clicks.",
     },
+    {
+      id: 9,
+      title:
+        "how can we do optimistic update? I tried and it is giving me error related to date. it says there is problem with 'createdAt'",
+      context:
+        "This question relates to implementing optimistic updates in a React application and troubleshooting an error related to a 'createdAt' date attribute.",
+    },
+    {
+      id: 10,
+      title: "how we use postman? can we just use inspect tool instead of it?",
+      context:
+        "This question relates to the utilization of Postman for API testing and its comparison with browser inspect tool functionalities.",
+    },
   ];
 
   return (
@@ -86,6 +101,8 @@ export const QuestionDistributive = () => {
       <QuestionSix title={questions[6].title} number={questions[6].id} />
       <QuestionSeven title={questions[7].title} number={questions[7].id} />
       <QuestionEight title={questions[8].title} number={questions[8].id} />
+      <QuestionNine title={questions[9].title} number={questions[9].id} />
+      <QuestionTen title={questions[10].title} number={questions[10].id} />
     </>
   );
 };
