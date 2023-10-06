@@ -22,6 +22,7 @@ export const QuestionSeven = ({ title, number }) => {
 
   // Using state to manage the count value, which will cause a re-render when changed
   const [count, setCount] = useState(0);
+  let [countTwo, setCountTwo] = useState(0);
 
   // Using const to store a static message, changing this won't cause a re-render
   const staticMessage = "This message won't change.";
@@ -29,6 +30,7 @@ export const QuestionSeven = ({ title, number }) => {
   // Function to increment count, demonstrating state change and re-render
   const incrementCount = () => {
     setCount(count + 1);
+    setCountTwo(countTwo + 2);
   };
 
   // Explanation
@@ -56,6 +58,7 @@ export const QuestionSeven = ({ title, number }) => {
           <p>{staticMessage}</p>
           {/* Displaying the count value from state and a button to change it */}
           <p>Count: {count}</p>
+          <p>Count: {countTwo}</p>
           <button onClick={incrementCount}>Increment Count</button>
         </>
       </details>
