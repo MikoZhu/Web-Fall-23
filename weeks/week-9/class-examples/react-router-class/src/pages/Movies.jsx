@@ -19,7 +19,7 @@ export const Movies = () => {
         }
         const json = await response.json();
         setMovies(json.results);
-        console.log(json.results);
+        //console.log(json.results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
