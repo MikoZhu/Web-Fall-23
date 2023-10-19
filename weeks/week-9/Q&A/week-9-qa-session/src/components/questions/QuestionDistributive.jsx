@@ -66,11 +66,6 @@ export const QuestionDistributive = () => {
       <QuestionThree title={questions[3].title} number={questions[3].id} />
       <QuestionFour title={questions[4].title} number={questions[4].id} />
       <QuestionFive title={questions[5].title} number={questions[5].id} />
-      {/* <QuestionSix title={questions[6].title} number={questions[6].id} />
-      <QuestionSeven title={questions[7].title} number={questions[7].id} />
-      <QuestionEight title={questions[8].title} number={questions[8].id} />
-      <QuestionNine title={questions[9].title} number={questions[9].id} />
-      <QuestionTen title={questions[10].title} number={questions[10].id} /> */}
     </>
   );
 };
