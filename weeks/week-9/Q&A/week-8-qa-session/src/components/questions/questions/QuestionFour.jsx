@@ -1,31 +1,34 @@
 export const QuestionFour = ({ title, number }) => {
+  //  The line below, line 3 to be exat, demonstrates how can you import env variables using the vite default config
+  const apiEnv = import.meta.env.VITE_OPENDB_KEY;
+  console.log(apiEnv);
   const content = {
     context:
-      "Postman is a widely-used tool among developers for testing APIs, which allows users to send requests to web servers and get responses back. It provides a user-friendly interface to send HTTP requests to the server and view the responses, which can be crucial in API development and testing.",
+      "In modern web development, especially with frameworks like React, it's common to have configuration settings that vary between different environments (e.g., development, staging, production). To manage these settings without hardcoding them into the application, developers use environment variables. The `.env` file is a standard and convenient way to define and store these variables. The .env file serves as a centralized location for environment-specific configurations.",
     bulletpoints: [
       {
         id: 1,
-        title: "What is Postman?",
+        title: "What is an .env File?",
         point:
-          "Postman is a collaboration platform for API development, which helps to simplify each step of building an API and streamline collaboration so you can create better APIs—faster.",
+          "The `.env` file is a plain text file used to define environment variables. Each line in the file represents a key-value pair, representing the variable name and its value.",
       },
       {
         id: 2,
-        title: "Why Use Postman?",
+        title: "Why Use an .env File?",
         point:
-          "It provides a graphical interface that allows developers to easily configure, interact with, and visualize API responses without needing to write code. It supports automated testing, provides detailed logging, and allows you to organize your tests in collections for reuse in various environments.",
+          "Security: Sensitive information, like API keys or database credentials, should not be hard-coded in the application. By using an `.env` file, these details can be kept out of the version control system.",
       },
       {
         id: 3,
-        title: "How to Use Postman?",
+        title: "How Does It Work with Modern Tools?",
         point:
-          "In Postman, you can create a request (GET, POST, PUT, DELETE, etc.) by specifying the request type, entering the API endpoint URL, setting up headers (if needed), and configuring the body payload for POST/PUT requests. After sending the request, Postman displays the server’s response, which can be analyzed in the tool.",
+          "Many development tools and frameworks automatically recognize and load variables from the `.env` file. For instance, Create React App will load variables prefixed with `REACT_APP_` from the `.env` file.",
       },
       {
         id: 4,
-        title: "Utilizing Postman in API Testing?",
+        title: "Understanding the Code Line",
         point:
-          "Postman allows you to manually or automatically send HTTP requests and view responses, facilitating API testing by enabling you to create test suites, manage versions, and utilize variables for dynamic testing which can mimic different environments and use-cases.",
+          "The line `const apiEnv = import.meta.env.VITE_OPENDB_KEY;` is a way to access an environment variable in modern JavaScript without a top-level import. Here, it fetches the value of `VITE_OPENDB_KEY` from the environment variables, which might have been defined in an `.env` file and exposed to the frontend by a tool like Vite.",
       },
     ],
   };
@@ -33,21 +36,6 @@ export const QuestionFour = ({ title, number }) => {
   return (
     <div className="question-outer-container">
       <details>
-        <a
-          href="https://www.youtube.com/watch?v=wmz1sGZp814"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Tutorial Short
-        </a>
-        <a
-          href="https://www.youtube.com/watch?v=VywxIQ2ZXw4"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Tutorial - Long
-        </a>
-
         <summary>
           {number} - {title}
         </summary>

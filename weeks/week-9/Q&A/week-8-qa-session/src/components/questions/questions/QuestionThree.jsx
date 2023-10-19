@@ -1,31 +1,31 @@
 export const QuestionThree = ({ title, number }) => {
   const content = {
     context:
-      "This question relates to the common issue of 'Page Not Found' errors on single-page applications (SPAs) when deployed and refreshed.",
+      "Single-page applications (SPAs) like those built with React often face a challenge when deployed on certain hosting platforms. When a user tries to navigate directly to a deep link or refreshes the page, the server might not recognize the route, leading to a 'Page Not Found' error. This is because SPAs handle routing on the client-side, and the server is unaware of these routes.",
     bulletpoints: [
       {
         id: 1,
-        title: "What Happens After Merging a Branch?",
+        title: "Why Does This Happen?",
         point:
-          "Once a branch has been successfully merged through a pull request, the additional branch is often not automatically deleted and remains in the repository.",
+          "In SPAs, the routing is managed by JavaScript on the client side. When you refresh the page or try to access a direct link, the server tries to find a corresponding resource for that route, which doesn't exist, leading to the error.",
       },
       {
         id: 2,
-        title: "Why Consider Deleting the Branch?",
+        title: "How Does 'Back to our site' Work?",
         point:
-          "Cleanliness: Keeping the repository clean from stale branches which are no longer in use.",
+          "When you click 'Back to our site', it takes you to the root (like /index.html) which the server recognizes. From there, client-side routing can take over again.",
       },
       {
         id: 3,
-        title: "Why Consider Deleting the Branch?",
+        title: "What's the Solution?",
         point:
-          "Clarity: Ensuring that team members have a clear view of active branches, avoiding any potential confusion",
+          "To address this, we can set up server-side configurations, like redirects, to always serve the main index.html file for any route. This way, the React app can handle the routing from there.",
       },
       {
         id: 4,
-        title: "Why Consider Deleting the Branch?",
+        title: "How Does the netlify.toml File Help?",
         point:
-          "Avoiding Redundancy: Preventing the usage of outdated branches for new features or fixes.",
+          "The netlify.toml file is a configuration file for Netlify deployments. By adding the provided redirect rules, we instruct Netlify to redirect all routes to the main index.html file with a 200 status. This ensures that our React app can handle the routing, and users won't encounter the 'Page Not Found' error.",
       },
     ],
   };

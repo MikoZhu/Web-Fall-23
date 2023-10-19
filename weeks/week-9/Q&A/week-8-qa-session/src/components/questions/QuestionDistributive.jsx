@@ -44,9 +44,9 @@ export const QuestionDistributive = () => {
     },
     {
       id: 4,
-      title: "Can you explain a bit more about Postman and how to use it?",
+      title: "What the hell is an .env file?",
       context:
-        "This question relates to understanding Postman as a tool for API development and testing, focusing on its utility and basic usage in the context of web development.",
+        "This question relates to the concept of environment variables and their storage in modern web development projects.",
     },
     {
       id: 5,
