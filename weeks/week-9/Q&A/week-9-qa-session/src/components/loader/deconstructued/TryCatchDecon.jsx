@@ -31,7 +31,15 @@ export const TryCatchDecon = () => {
       {isLoading ? (
         <HourglassComp height="80" width="80" colors={["#306cce", "#72a1ed"]} />
       ) : movie ? (
-        <div>{/* ... */}</div>
+        <div>
+          {" "}
+          <div>
+            <h3>{movie.title}</h3>
+            <p>{movie.description}</p>
+            <p>Release Date: {movie.release_date}</p>
+            {/* Display other movie details as needed */}
+          </div>
+        </div>
       ) : (
         <button onClick={simulateFetchMovies}>
           Load Movie Data - Try Catch - Component Deconstructed

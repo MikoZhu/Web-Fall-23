@@ -1,7 +1,12 @@
 export const QuestionFour = ({ title, number }) => {
   //  The line below, line 3 to be exat, demonstrates how can you import env variables using the vite default config
   const apiEnv = import.meta.env.VITE_OPENDB_KEY;
+  const netflix = import.meta.env.VITE_NETFLIX_API_KEY;
+  const disney = import.meta.env.VITE_DISNEY_API_KEY;
   console.log(apiEnv);
+  console.log(netflix);
+  console.log(disney);
+
   const content = {
     context:
       "In modern web development, especially with frameworks like React, it's common to have configuration settings that vary between different environments (e.g., development, staging, production). To manage these settings without hardcoding them into the application, developers use environment variables. The `.env` file is a standard and convenient way to define and store these variables. The .env file serves as a centralized location for environment-specific configurations.",
