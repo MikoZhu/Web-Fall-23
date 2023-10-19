@@ -1,0 +1,44 @@
+import { useState } from "react";
+import { HourglassComp } from "../hourGlassComp/HourGlassComp";
+
+export const IfElseDecon = () => {
+  const [movie, setMovie] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const mockMovieData = {
+    title: "Mock Movie",
+    description: "This is a mock movie description.",
+    release_date: "2023-10-19",
+  };
+
+  const simulateFetchMovies = () => {
+    setIsLoading(true);
+
+    setTimeout(() => {
+      const isSuccessful = true; // Modify to simulate failure
+
+      if (isSuccessful) {
+        setMovie(mockMovieData);
+        setIsLoading(false);
+      } else {
+        setError("Error fetching data.");
+        setIsLoading(false);
+      }
+    }, 2000);
+  };
+
+  return (
+    <>
+      {isLoading ? (
+        <HourglassComp height="80" width="80" colors={["#306cce", "#72a1ed"]} />
+      ) : movie ? (
+        <div>{/* ... */}</div>
+      ) : (
+        <button onClick={simulateFetchMovies}>
+          Load Movie Data - If Else - Component Deconstructed
+        </button>
+      )}
+    </>
+  );
+};
