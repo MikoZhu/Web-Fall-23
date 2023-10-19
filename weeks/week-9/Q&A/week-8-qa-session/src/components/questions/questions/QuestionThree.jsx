@@ -1,7 +1,7 @@
 export const QuestionThree = ({ title, number }) => {
   const content = {
     context:
-      "When working in a team environment using Git, branch management becomes crucial to maintain a clean and understandable history, as well as to avoid any potential confusion among team members.",
+      "This question relates to the common issue of 'Page Not Found' errors on single-page applications (SPAs) when deployed and refreshed.",
     bulletpoints: [
       {
         id: 1,
