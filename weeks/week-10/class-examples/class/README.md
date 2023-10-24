@@ -37,3 +37,9 @@ In Zustand, you define state variables and their associated update functions wit
 While Zustand provides a similar interface for managing state and updating it, it doesn't use the useState hook or the concept of "hooks" in the same way as React. Zustand's reactivity mechanism is more lightweight and optimized for use outside of React components, such as in plain JavaScript functions or non-React contexts.
 
 In summary, you cannot directly use the useState hook within Zustand stores because Zustand has its own way of managing and updating state through the provided functions.
+
+### Usefull Links
+
+[Zustand Page](https://github.com/pmndrs/zustand)
+[Context API tutorial](https://www.youtube.com/watch?v=sP7ANcTpJr8)
+[Zustand Tutorial](https://www.youtube.com/watch?v=fZPgBnL2x-Q)
