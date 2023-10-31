@@ -1,0 +1,13 @@
+{
+  "welcome": "Today we celebrate Halloween",
+  "text": "Halloween, originally stemming from the ancient Celtic festival of Samhain over 2,000 years ago, marked the end of the harvest season in Ireland, the UK, and France. The Celts believed that on October 31st, the boundary between the living and the dead blurred, allowing spirits to roam. To ward off these spirits, they lit bonfires and wore costumes made from animal hides. With the advent of Christianity, the holiday merged with All Saints' Day on November 1st, eventually becoming Halloween, a modern celebration known for costumes, candy, and a playful embrace of the spooky and supernatural.",
+  "translatePage": {
+    "heading": "Hello world",
+    "sub-heading": "I like to dress up for halloween"
+  },
+  "navelements": {
+    "home": "home page"
+  },
+  "homePage": {},
+  "aboutPage": {}
+}
