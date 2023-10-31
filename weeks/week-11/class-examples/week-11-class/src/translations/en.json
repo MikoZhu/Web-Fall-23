@@ -4,10 +4,5 @@
   "translatePage": {
     "heading": "Hello world",
     "sub-heading": "I like to dress up for halloween"
-  },
-  "navelements": {
-    "home": "home page"
-  },
-  "homePage": {},
-  "aboutPage": {}
+  }
 }
