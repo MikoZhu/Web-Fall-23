@@ -37,7 +37,7 @@ export const QuestionThree = ({ title, number }) => {
           </>
           <div>
             <p>Count: {count}</p>
-            <button onClick={() => increment(1)}>Increment</button>
+            <button onClick={() => increment(10)}>Increment</button>
             <button onClick={() => decrement(1)}>Decrement</button>
             <button onClick={logCount}>Log Count</button>
             <p>Is Positive: {isPositive() ? "Yes" : "No"}</p>
