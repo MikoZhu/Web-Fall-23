@@ -9,6 +9,7 @@ This React project aims to explore various CSS frameworks and discuss their feat
 #### Some CSS Frameworks & UI Libraries include
 
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Tailwind UI](https://tailwindui.com/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Ant Design](https://ant.design/)
 - [Flowbite](https://flowbite.com/)
