@@ -6,6 +6,21 @@ Welcome to the README.md file for our React project, where we delve deep into CS
 
 This React project aims to explore various CSS frameworks and discuss their features, advantages, and how to integrate them into a React application to create stylish and responsive user interfaces.
 
+#### Some CSS Frameworks & UI Libraries include
+
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Ant Design](https://ant.design/)
+- [Flowbite](https://flowbite.com/)
+- [Chakra UI](https://chakra-ui.com/)
+- [Mantine](https://mantine.dev/)
+- [Bulma UI](https://bulma.io/)
+
+#### Hero Icon Links
+
+- [Hericons Web](https://heroicons.com/)
+- [List of Icons with naming for react import as library ;)](https://unpkg.com/browse/@heroicons/react@2.0.18/24/outline/)
+
 ## CSS Frameworks
 
 In this project, we will explore the following CSS frameworks:
