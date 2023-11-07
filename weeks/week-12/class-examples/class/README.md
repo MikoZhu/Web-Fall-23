@@ -44,3 +44,15 @@ What's better about using `useRef` here?
 - It's a bit quicker for big forms because there's less updating going on.
 
 But remember, if you want to do things like check what's being typed right away (like showing an error if the email doesn't look right), `useState` is usually the better choice because it's designed for that kind of thing. `useRef` is good for when you want to just let the form do its thing and only care about the values at the end.
+
+## The `useLayoutEffect` Hook
+
+### What is it?
+
+Much like `useRef` simplifies interactions with DOM elements, `useLayoutEffect` is another hook React provides to handle updates that need to be synchronized with DOM changes. It's quite similar to the `useEffect` hook but with a key difference in timing.
+
+`useLayoutEffect` is called right after all DOM mutations. This means it executes before the browser has a chance to paint the changes to the screen. This timing is crucial for certain operations that need to measure or modify the DOM before it becomes visible to the user.
+
+### Why do we use it?
+
+Synchronized DOM Updates: `useLayoutEffect` ensures that any changes you make to the DOM are completed and applied before the browser updates the screen. This is especially important if you need to measure the DOM elements, like their height or width, and then make some changes based on those measurements. If you did this in `useEffect`, you might see a flicker on the screen because the DOM would be measured and altered in separate screen updates.

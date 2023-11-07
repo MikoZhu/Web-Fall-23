@@ -17,7 +17,21 @@ body.dark {
   color: #fff;
 }
 
-/* // Forms  */
+/* Component Examples */
+
+.bordered {
+  border: 1px solid red;
+}
+
+.default-color {
+  color: black;
+}
+
+.blue-text {
+  color: blue;
+}
+
+/*  Forms  */
 
 form {
   border: 1px solid red;
