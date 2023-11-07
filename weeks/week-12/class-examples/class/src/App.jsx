@@ -9,6 +9,8 @@ import { ClassExcercise } from "./components/useLayoutEffect/ClassExcercise";
 import { ClassExcerciseWithUseEffect } from "./components/useLayoutEffect/ClassExcerciseWithUseEffect";
 import { SimpleTodoList } from "./components/useReducer/SimpleToDoList";
 import { SimpleToDoListUseState } from "./components/useReducer/SimpleToDoListUseState";
+import { Counter } from "./components/useReducer/Counter";
+import { CounterReducer } from "./components/useReducer/CounterReducer";
 
 // Defining and exporting the App component
 export const App = () => {
@@ -28,6 +30,8 @@ export const App = () => {
       {/* Use reducer Hook */}
       <SimpleTodoList />
       <SimpleToDoListUseState />
+      <Counter />
+      <CounterReducer />
     </div>
   );
 };
