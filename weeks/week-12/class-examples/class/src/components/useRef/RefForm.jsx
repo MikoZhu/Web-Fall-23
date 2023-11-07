@@ -33,28 +33,26 @@ export const RefForm = () => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <h4>
-        useRef <Form></Form>
-      </h4>
-      <div>
+      <h4>Use Ref Form</h4>
+      <div className="form-group">
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" name="name" ref={nameRef} />
       </div>
-      <div>
+      <div className="form-group">
         <label htmlFor="email">Email:</label>
         <input type="email" id="email" name="email" ref={emailRef} />
       </div>
-      <div>
+      <div className="form-group">
         <label htmlFor="message">Message:</label>
         <textarea id="message" name="message" ref={messageRef} />
       </div>
-      <div>
+      <div className="form-group">
         <label>
           <input type="checkbox" name="isSubscribed" ref={isSubscribedRef} />
           Subscribe to Newsletter
         </label>
       </div>
-      <div>
+      <div className="form-group">
         <label htmlFor="options">Select Option:</label>
         <select id="options" name="selectedOption" ref={selectedOptionRef}>
           <option value="option1">Option 1</option>

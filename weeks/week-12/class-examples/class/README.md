@@ -1,6 +1,23 @@
 # Week 12 Class
 
-### useRef Hook
+## The UseRef Hook
+
+### What is it ?
+
+The useRef is a hook provided by React that returns a mutable ref object. This object has a property called .current, which is initialized to the argument passed into useRef. "mutable" refers to the ability of the ref object's .current property to be changed or modified. When you have a mutable object in programming, it means that the object's state or contents can be altered after it's been created.
+
+- You create a `ref` by calling `useRef()`, and you initialize its `.current` property to whatever you pass as an argument to `useRef()`.
+- The `.current` property is mutable, meaning you can later change what it holds. For example, if you initially set it to `useRef(0)`, `.current` starts off as 0. Later on, you could change it to any other value, like `.current = 5`, and `.current` will now be 5.
+- Despite these changes, React won't re-render the component just because a `ref`'s `.current` property was mutated. This is different from state variables created with `useState`, which do cause re-renders when they are updated.
+
+### Why do we use it ?
+
+- Persistence Without Rerenders: Unlike state variables managed by `useState`, updates to a ref's `.current` property do not trigger component rerenders. This persistent state is ideal for values that you want to keep track of across renders without causing a rerender each time the value changes.
+- Direct DOM Access: `useRef` can be used to store a direct reference to a DOM node. This is particularly useful when you need to interact with an element imperatively, such as setting focus, reading values, or integrating with third-party DOM libraries. Once you pass a ref object to an element via the `ref` attribute, you can interact with that element directly through `useRef.current`.
+
+In summary the useRef hook is handy in React when you want to remember something without constantly telling the whole app about it. It lets you quietly keep track of things or talk to parts of your webpage directly, without the usual update announcements that can slow things down.
+
+### useRef Hook Example
 
 Before Changes:
 

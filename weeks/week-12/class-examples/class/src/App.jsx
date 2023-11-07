@@ -1,8 +1,8 @@
 // Importing necessary hooks from React
 import { useState, useLayoutEffect } from "react";
-import { RefForm } from "./components/RefForm";
-import { RefFormTwo } from "./components/RefFormTwo";
-import { StateForm } from "./components/StateForm";
+import { RefForm } from "./components/useRef/RefForm";
+import { RefFormTwo } from "./components/useRef/RefFormTwo";
+import { StateForm } from "./components/useRef/StateForm";
 
 // Defining and exporting the App component
 export const App = () => {
@@ -61,8 +61,9 @@ export const App = () => {
       <button onClick={toggleTheme}>Toggle Theme</button>
       {/* Conditionally rendering the poem based on the current theme */}
       <p>{theme === "light" ? lightPoem : darkPoem}</p>
+      {/* Use State Form - OLD */}
       <StateForm />
-      {/* <RefForm /> */}
+      <RefForm />
       <RefFormTwo />
     </div>
   );
