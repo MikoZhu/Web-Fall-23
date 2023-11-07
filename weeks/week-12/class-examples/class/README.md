@@ -56,3 +56,28 @@ Much like `useRef` simplifies interactions with DOM elements, `useLayoutEffect` 
 ### Why do we use it?
 
 Synchronized DOM Updates: `useLayoutEffect` ensures that any changes you make to the DOM are completed and applied before the browser updates the screen. This is especially important if you need to measure the DOM elements, like their height or width, and then make some changes based on those measurements. If you did this in `useEffect`, you might see a flicker on the screen because the DOM would be measured and altered in separate screen updates.
+
+### useLayoutEffect Hook Example
+
+Before Changes:
+
+- We used `useEffect` to apply the chosen theme to the document body. This was happening after the browser had painted the changes, meaning there was a slight delay.
+- Every time the theme was toggled, `useEffect` would run after the render is painted to the screen.
+
+After Changes:
+
+- Now, we use `useLayoutEffect` for the theme application. This ensures that the theme class is applied to the body before the browser has a chance to paint the changes.
+- There's no visible delay or flicker because `useLayoutEffect` fires synchronously right after all DOM mutations, but before the paint.
+
+Why did we make these changes?
+
+- `useEffect` works well for most side effects that don't need to happen exactly in sync with the DOM updates, like fetching data or subscribing to some external service.
+- However, when it comes to updating the DOM and you want to ensure the user doesn't see a flicker of a previous state, `useLayoutEffect` is your go-to hook. It makes sure that the changes to the DOM (like our theme class on the body) are painted in the same cycle as the updates happen.
+
+What's better about using `useLayoutEffect` here?
+
+- It's smoother for the user. They won't see a flicker between themes, creating a seamless experience.
+- It's crucial for preserving the consistency of animations, transitions, and in our case, avoiding the flash of an unstyled theme.
+- Although `useLayoutEffect` can lead to longer frame times if overused because it runs before paint, in situations like ours where visual continuity is key, it's the right choice.
+
+But remember, while `useLayoutEffect` ensures a seamless visual update, it's heavier on performance if not used wisely. It should be reserved for cases where you need to make DOM measurements or when you must guarantee that the changes are invisible to the user. For most other side effects, `useEffect` is the more performance-friendly option.
