@@ -4,6 +4,8 @@
 
 ### What is it ?
 
+In really simple terms, the useRef hook allows us to interact with DOM Elements easily and it saves us computing power
+
 The useRef is a hook provided by React that returns a mutable ref object. This object has a property called .current, which is initialized to the argument passed into useRef. "mutable" refers to the ability of the ref object's .current property to be changed or modified. When you have a mutable object in programming, it means that the object's state or contents can be altered after it's been created.
 
 - You create a `ref` by calling `useRef()`, and you initialize its `.current` property to whatever you pass as an argument to `useRef()`.
