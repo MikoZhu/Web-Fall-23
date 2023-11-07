@@ -11,7 +11,7 @@ import { SimpleTodoList } from "./components/useReducer/SimpleToDoList";
 import { SimpleToDoListUseState } from "./components/useReducer/SimpleToDoListUseState";
 import { Counter } from "./components/useReducer/Counter";
 import { CounterReducer } from "./components/useReducer/CounterReducer";
-
+import { FetchFacts } from "./components/customHooks/FetchFacts";
 // Defining and exporting the App component
 export const App = () => {
   // Returning JSX to render the component UI
@@ -32,6 +32,8 @@ export const App = () => {
       <SimpleToDoListUseState />
       <Counter />
       <CounterReducer />
+      {/* Custom Hooks */}
+      <FetchFacts />
     </div>
   );
 };
