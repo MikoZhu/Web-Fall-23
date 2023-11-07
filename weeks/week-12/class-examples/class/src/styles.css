@@ -16,3 +16,30 @@ body.dark {
   background-color: #000;
   color: #fff;
 }
+
+/* // Forms  */
+
+form {
+  border: 1px solid red;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+form h4 {
+  margin: 0;
+}
+
+form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+form button {
+  margin: 1em 0;
+  width: 100%;
+}

@@ -30,7 +30,8 @@ export const StateForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+      <h4>Use State Form</h4>
+      <div className="form-group">
         <label htmlFor="name">Name:</label>
         <input
           type="text"
@@ -40,7 +41,7 @@ export const StateForm = () => {
           onChange={handleInputChange}
         />
       </div>
-      <div>
+      <div className="form-group">
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -50,7 +51,7 @@ export const StateForm = () => {
           onChange={handleInputChange}
         />
       </div>
-      <div>
+      <div className="form-group">
         <label htmlFor="message">Message:</label>
         <textarea
           id="message"
@@ -59,7 +60,7 @@ export const StateForm = () => {
           onChange={handleInputChange}
         />
       </div>
-      <div>
+      <div className="form-group">
         <label>
           <input
             type="checkbox"
@@ -70,7 +71,7 @@ export const StateForm = () => {
           Subscribe to Newsletter
         </label>
       </div>
-      <div>
+      <div className="form-group">
         <label htmlFor="options">Select Option:</label>
         <select
           id="options"

@@ -36,7 +36,8 @@ export const RefFormTwo = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+      <h4>UseRef Form - Two</h4>
+      <div className="form-group">
         <label htmlFor="name">Name:</label>
         <input
           type="text"
@@ -45,7 +46,7 @@ export const RefFormTwo = () => {
           ref={(el) => (formRefs.name = el)}
         />
       </div>
-      <div>
+      <div className="form-group">
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -54,7 +55,7 @@ export const RefFormTwo = () => {
           ref={(el) => (formRefs.email = el)}
         />
       </div>
-      <div>
+      <div className="form-group">
         <label htmlFor="message">Message:</label>
         <textarea
           id="message"
@@ -62,7 +63,7 @@ export const RefFormTwo = () => {
           ref={(el) => (formRefs.message = el)}
         />
       </div>
-      <div>
+      <div className="form-group">
         <label>
           <input
             type="checkbox"
@@ -72,7 +73,7 @@ export const RefFormTwo = () => {
           Subscribe to Newsletter
         </label>
       </div>
-      <div>
+      <div className="form-group">
         <label htmlFor="options">Select Option:</label>
         <select
           id="options"
