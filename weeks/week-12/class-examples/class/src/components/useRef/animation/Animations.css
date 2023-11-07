@@ -1,0 +1,16 @@
+/* animations.css */
+.slide-in {
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+
+.slide-out {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.sliding-div {
+  background-color: lightblue;
+  padding: 20px;
+  margin-top: 20px;
+}

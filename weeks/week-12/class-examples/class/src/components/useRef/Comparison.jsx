@@ -21,21 +21,25 @@ export const Comparison = () => {
 
   return (
     <div className="bordered">
-      {/* Paragraph manipulated by useRef */}
-      <p ref={paragraphRef} className="initial-class">
-        This text changes color with useRef (no re-render).
-      </p>
-      <button onClick={changeColorWithRef}>Change Color with useRef</button>
+      <div className="inner">
+        <h3>Comparing useState vs useRef</h3>
+        {/* Paragraph manipulated by useRef */}
+        <p ref={paragraphRef} className="initial-class">
+          This text changes color with useRef (no re-render).
+        </p>
+        <button onClick={changeColorWithRef}>Change Color with useRef</button>
 
-      {/* Spacer */}
-      <hr />
+        {/* Spacer */}
 
-      {/* Paragraph manipulated by useState */}
-      {/* The className changes when isBlue changes, causing a re-render */}
-      <p className={isBlue ? "blue-text" : "initial-class"}>
-        This text changes color with useState (re-render).
-      </p>
-      <button onClick={changeColorWithState}>Change Color with useState</button>
+        {/* Paragraph manipulated by useState */}
+        {/* The className changes when isBlue changes, causing a re-render */}
+        <p className={isBlue ? "blue-text" : "initial-class"}>
+          This text changes color with useState (re-render).
+        </p>
+        <button onClick={changeColorWithState}>
+          Change Color with useState
+        </button>
+      </div>
     </div>
   );
 };

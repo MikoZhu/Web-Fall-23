@@ -81,3 +81,23 @@ What's better about using `useLayoutEffect` here?
 - Although `useLayoutEffect` can lead to longer frame times if overused because it runs before paint, in situations like ours where visual continuity is key, it's the right choice.
 
 But remember, while `useLayoutEffect` ensures a seamless visual update, it's heavier on performance if not used wisely. It should be reserved for cases where you need to make DOM measurements or when you must guarantee that the changes are invisible to the user. For most other side effects, `useEffect` is the more performance-friendly option.
+
+## The `useReducer` Hook
+
+### What is it?
+
+To put it simply, the `useReducer` hook is a way to manage complex state logic in React components. It is similar to `useState` but gives you more precise control over how state is updated.
+
+The useReducer is a hook that React provides when the state logic becomes complex and we need a more scalable solution than useState. It takes a reducer function and an initial state as arguments. A "reducer" here is a function that determines how to update the state based on the type of action it receives. The "state" can be any value or object that represents the current state of a component.
+
+When you call useReducer(), you get an array with two elements: the current state, and a dispatch function.
+
+You can think of the dispatch function like a train conductor who makes sure the right actions get to the reducer function.
+The state updates are made based on actions. Actions are objects that tell the reducer function what change needs to happen. They typically have a type field and any other data needed to update the state.
+
+### Why do we use it?
+
+- Centralized State Logic: With useReducer, all state logic is driven by a single function---the reducer. This centralization makes it easier to understand and predict state changes, which is especially useful in complex components or when working with a team.
+- Predictable State Transitions: Because the reducer function determines state transitions based on the action received, the state updates in a predictable manner. This helps in managing state transitions and debugging state-related issues. Enhanced Scalability: For components with complex state logic, useReducer scales better than useState. It keeps the component tidy and maintainable by outsourcing state logic to a reducer function.
+
+To summarize, the useReducer hook is a powerful feature in React for managing state in your components with precise control.
