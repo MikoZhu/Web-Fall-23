@@ -43,7 +43,7 @@ export const SimpleTodoList = () => {
   return (
     <div className="bordered">
       <div className="inner">
-        <h2>Todo List</h2>
+        <h2>Todo List - useReducer</h2>
         {/* This button calls 'addTodo' with text from a prompt when clicked. */}
         <button onClick={() => addTodo(prompt("What do you need to do?"))}>
           Add Todo

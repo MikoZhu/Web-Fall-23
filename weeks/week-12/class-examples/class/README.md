@@ -101,3 +101,5 @@ The state updates are made based on actions. Actions are objects that tell the r
 - Predictable State Transitions: Because the reducer function determines state transitions based on the action received, the state updates in a predictable manner. This helps in managing state transitions and debugging state-related issues. Enhanced Scalability: For components with complex state logic, useReducer scales better than useState. It keeps the component tidy and maintainable by outsourcing state logic to a reducer function.
 
 To summarize, the useReducer hook is a powerful feature in React for managing state in your components with precise control.
+
+Great Article on [REAL LIFE USECASES OF THE USEREDUCER HOOK](https://medium.com/@singhmanjeetn/exploring-usereducer-hooks-use-case-605ab61365b2)

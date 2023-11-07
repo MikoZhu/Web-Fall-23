@@ -19,17 +19,17 @@ export const ClassExcerciseWithUseEffect = () => {
 
   // Poem text for the light theme
   const lightPoem = `
-    ... // (same poem text as before)
+   Light  poem here....
   `;
 
   // Poem text for the dark theme
   const darkPoem = `
-    ... // (same poem text as before)
+    Dark poem here...
   `;
 
   return (
     <div className="bordered">
-      <h1>Theme Exercise</h1>
+      <h1>Theme Exercise - useEffect</h1>
       <p>
         The current theme is{" "}
         <span style={{ color: theme === "dark" ? "red" : "blue" }}>

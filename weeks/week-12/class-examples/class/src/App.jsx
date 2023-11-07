@@ -8,6 +8,7 @@ import { StateForm } from "./components/useRef/StateForm";
 import { ClassExcercise } from "./components/useLayoutEffect/ClassExcercise";
 import { ClassExcerciseWithUseEffect } from "./components/useLayoutEffect/ClassExcerciseWithUseEffect";
 import { SimpleTodoList } from "./components/useReducer/SimpleToDoList";
+import { SimpleToDoListUseState } from "./components/useReducer/SimpleToDoListUseState";
 
 // Defining and exporting the App component
 export const App = () => {
@@ -26,6 +27,7 @@ export const App = () => {
       <ClassExcercise />
       {/* Use reducer Hook */}
       <SimpleTodoList />
+      <SimpleToDoListUseState />
     </div>
   );
 };

@@ -16,34 +16,20 @@ export const ClassExcercise = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
-  // Defining a string that holds the light theme poem
+  // Poem text for the light theme
   const lightPoem = `
-    In realms where light does softly tread,
-    A gentle glow where we are led.
-    Sunbeams dance with joy so free,
-    In a world of warmth, we find our glee.
-    Fields of gold under the azure sky,
-    In the light, our spirits ever high.
-    A canvas painted in hues so bright,
-    We find our peace in this splendid light.
+   Light  poem here....
   `;
 
-  // Defining a string that holds the dark theme poem
+  // Poem text for the dark theme
   const darkPoem = `
-    In the quietude of the shadow’s grace,
-    Mysteries cloak the silent space.
-    Moonlight whispers to the tranquil sea,
-    In the dark, our souls dare to be.
-    Stars twinkle in the velvet night,
-    Guiding us with their gentle light.
-    A universe veiled in enigmatic art,
-    We explore the depths of our own heart.
+    Dark poem here...
   `;
   return (
     <div className="bordered">
       {" "}
       {/* Displaying a heading */}
-      <h1>Theme Exercise</h1>
+      <h1>Theme Exercise - useLayoutEffect</h1>
       {/* Displaying the current theme with conditional styling */}
       <p>
         The current theme is{" "}
