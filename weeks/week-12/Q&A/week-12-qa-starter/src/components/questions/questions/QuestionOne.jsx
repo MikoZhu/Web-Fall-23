@@ -32,7 +32,34 @@ export const QuestionOne = ({ title, number }) => {
     ],
   };
 
-  // EXAMPLE OF POST REQUEST
+  // USEFREF IMPLEMENTATION
+
+  const [qr, setQr] = useState("");
+  const qrRef = useRef(null); // connecting this to a dom element :)
+
+  // Create a fuhnc to generateQrCode
+
+  const generateQrCode = async () => {
+    try {
+      const url = await QRCode.toDataURL(
+        "https://github.com/Technigo/project-custom-hooks-qr-code-generator-vite/blob/main/src/components/QrExample.jsx"
+      );
+      setQr(url);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const downloadQrCode = () => {
+    const fileName = prompt("Enter a name for your QR Code:");
+    if (qr && fileName) {
+      const link = qrRef.current;
+      link.href = qr; // this chains the .current property to the  href attribute in order to do p[ass lomn the qr
+      link.download = `${fileName}.png`; // this triggers donwload possiblity and saves the qr with a particular name + format
+      link.click(); //  trigger the download to local machine
+    }
+  };
+
   return (
     <div className="question-outer-container">
       <details>
@@ -52,6 +79,13 @@ export const QuestionOne = ({ title, number }) => {
               );
             })}
           </>
+          <div>
+            <button onClick={generateQrCode}>Generate Qr</button>
+            <a ref={qrRef} style={{ display: "none" }}>
+              Download
+            </a>
+            {qr && <button onClick={downloadQrCode}>Download QR</button>}
+          </div>
         </>
       </details>
     </div>

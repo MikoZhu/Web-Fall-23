@@ -20,7 +20,6 @@ export const QrExample = () => {
       },
       (err, url) => {
         if (err) return console.error(err);
-
         console.log(url);
         setQr(url);
       }

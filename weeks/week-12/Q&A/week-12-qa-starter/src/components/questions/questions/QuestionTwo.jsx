@@ -1,5 +1,4 @@
-import { useState, useRef } from "react";
-import QRCode from "qrcode";
+import { CustomHookComp } from "../../qrComps/CustomHookComp";
 
 export const QuestionTwo = ({ title, number }) => {
   const content = {
@@ -19,6 +18,7 @@ export const QuestionTwo = ({ title, number }) => {
             alt="Grenlights"
           />
         </>
+        <CustomHookComp />
       </details>
     </div>
   );
