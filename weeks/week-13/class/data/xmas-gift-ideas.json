@@ -1,0 +1,352 @@
+[
+  {
+    "item": "Bamboo Cutlery Set",
+    "category": "daily usage",
+    "id": 1,
+    "goodForWallet": true,
+    "price": 78
+  },
+  {
+    "item": "Solar Powered Charger",
+    "category": "essential",
+    "id": 2,
+    "goodForWallet": true,
+    "price": 97
+  },
+  {
+    "item": "Reusable Water Bottle",
+    "category": "essential",
+    "id": 3,
+    "goodForWallet": false,
+    "price": 89
+  },
+  {
+    "item": "Organic Cotton Tote Bag",
+    "category": "occasional use",
+    "id": 4,
+    "goodForWallet": false,
+    "price": 13
+  },
+  {
+    "item": "Biodegradable Yoga Mat",
+    "category": "essential",
+    "id": 5,
+    "goodForWallet": true,
+    "price": 23
+  },
+  {
+    "item": "Eco-Friendly Notebook",
+    "category": "occasional use",
+    "id": 6,
+    "goodForWallet": true,
+    "price": 60
+  },
+  {
+    "item": "Recycled Glass Vase",
+    "category": "luxury",
+    "id": 7,
+    "goodForWallet": false,
+    "price": 90
+  },
+  {
+    "item": "Plantable Pencils",
+    "category": "essential",
+    "id": 8,
+    "goodForWallet": true,
+    "price": 78
+  },
+  {
+    "item": "Solar Garden Light",
+    "category": "luxury",
+    "id": 9,
+    "goodForWallet": true,
+    "price": 25
+  },
+  {
+    "item": "Compostable Phone Case",
+    "category": "occasional use",
+    "id": 10,
+    "goodForWallet": false,
+    "price": 88
+  },
+  {
+    "item": "Bee-friendly Seed Bombs",
+    "category": "daily usage",
+    "id": 11,
+    "goodForWallet": true,
+    "price": 12
+  },
+  {
+    "item": "Recycled Fabric Scarf",
+    "category": "occasional use",
+    "id": 12,
+    "goodForWallet": true,
+    "price": 51
+  },
+  {
+    "item": "Eco Soy Candle",
+    "category": "daily usage",
+    "id": 13,
+    "goodForWallet": false,
+    "price": 58
+  },
+  {
+    "item": "Handcrafted Bird Feeder",
+    "category": "essential",
+    "id": 14,
+    "goodForWallet": true,
+    "price": 11
+  },
+  {
+    "item": "Bamboo Toothbrush Set",
+    "category": "luxury",
+    "id": 15,
+    "goodForWallet": true,
+    "price": 25
+  },
+  {
+    "item": "Organic Tea Assortment",
+    "category": "occasional use",
+    "id": 16,
+    "goodForWallet": false,
+    "price": 40
+  },
+  {
+    "item": "Upcycled Jewelry",
+    "category": "luxury",
+    "id": 17,
+    "goodForWallet": false,
+    "price": 91
+  },
+  {
+    "item": "Sustainable Wooden Clock",
+    "category": "occasional use",
+    "id": 18,
+    "goodForWallet": true,
+    "price": 62
+  },
+  {
+    "item": "Recyclable Shopping Bag",
+    "category": "daily usage",
+    "id": 19,
+    "goodForWallet": true,
+    "price": 69
+  },
+  {
+    "item": "Herbal Growing Kit",
+    "category": "daily usage",
+    "id": 20,
+    "goodForWallet": false,
+    "price": 42
+  },
+  {
+    "item": "Eco-friendly Soap Bars",
+    "category": "daily usage",
+    "id": 21,
+    "goodForWallet": false,
+    "price": 31
+  },
+  {
+    "item": "Bamboo Sunglasses",
+    "category": "essential",
+    "id": 22,
+    "goodForWallet": true,
+    "price": 27
+  },
+  {
+    "item": "Reusable Makeup Pads",
+    "category": "daily usage",
+    "id": 23,
+    "goodForWallet": false,
+    "price": 45
+  },
+  {
+    "item": "Natural Shampoo Bars",
+    "category": "daily usage",
+    "id": 24,
+    "goodForWallet": false,
+    "price": 60
+  },
+  {
+    "item": "Zero Waste Starter Kit",
+    "category": "luxury",
+    "id": 25,
+    "goodForWallet": false,
+    "price": 34
+  },
+  {
+    "item": "Eco Wool Blanket",
+    "category": "occasional use",
+    "id": 26,
+    "goodForWallet": true,
+    "price": 69
+  },
+  {
+    "item": "Sustainable Coffee Cup",
+    "category": "daily usage",
+    "id": 27,
+    "goodForWallet": false,
+    "price": 7
+  },
+  {
+    "item": "Vegan Leather Wallet",
+    "category": "essential",
+    "id": 28,
+    "goodForWallet": false,
+    "price": 44
+  },
+  {
+    "item": "Organic Chocolate Box",
+    "category": "daily usage",
+    "id": 29,
+    "goodForWallet": true,
+    "price": 15
+  },
+  {
+    "item": "Recycled Paper Journal",
+    "category": "daily usage",
+    "id": 30,
+    "goodForWallet": false,
+    "price": 77
+  },
+  {
+    "item": "Handmade Ceramic Mug",
+    "category": "daily usage",
+    "id": 31,
+    "goodForWallet": true,
+    "price": 22
+  },
+  {
+    "item": "Organic Bath Bombs",
+    "category": "daily usage",
+    "id": 32,
+    "goodForWallet": true,
+    "price": 16
+  },
+  {
+    "item": "Bamboo Wireless Keyboard",
+    "category": "luxury",
+    "id": 33,
+    "goodForWallet": true,
+    "price": 82
+  },
+  {
+    "item": "Solar-Powered Speaker",
+    "category": "daily usage",
+    "id": 34,
+    "goodForWallet": true,
+    "price": 79
+  },
+  {
+    "item": "Eco-friendly Lunch Box",
+    "category": "luxury",
+    "id": 35,
+    "goodForWallet": true,
+    "price": 74
+  },
+  {
+    "item": "Bamboo Bed Sheets",
+    "category": "luxury",
+    "id": 36,
+    "goodForWallet": true,
+    "price": 22
+  },
+  {
+    "item": "Recycled Bicycle Chain Frame",
+    "category": "luxury",
+    "id": 37,
+    "goodForWallet": false,
+    "price": 15
+  },
+  {
+    "item": "Plant-based Cookbook",
+    "category": "luxury",
+    "id": 38,
+    "goodForWallet": false,
+    "price": 14
+  },
+  {
+    "item": "Eco-friendly Toothpaste",
+    "category": "luxury",
+    "id": 39,
+    "goodForWallet": true,
+    "price": 32
+  },
+  {
+    "item": "Sustainable Yoga Pants",
+    "category": "daily usage",
+    "id": 40,
+    "goodForWallet": true,
+    "price": 100
+  },
+  {
+    "item": "Reusable Beeswax Wraps",
+    "category": "occasional use",
+    "id": 41,
+    "goodForWallet": false,
+    "price": 25
+  },
+  {
+    "item": "Bamboo Hair Brush",
+    "category": "luxury",
+    "id": 42,
+    "goodForWallet": true,
+    "price": 14
+  },
+  {
+    "item": "Organic Skincare Set",
+    "category": "daily usage",
+    "id": 43,
+    "goodForWallet": true,
+    "price": 7
+  },
+  {
+    "item": "Handwoven Rattan Basket",
+    "category": "essential",
+    "id": 44,
+    "goodForWallet": false,
+    "price": 28
+  },
+  {
+    "item": "Reusable Straw Kit",
+    "category": "luxury",
+    "id": 45,
+    "goodForWallet": false,
+    "price": 51
+  },
+  {
+    "item": "Recycled Tire Wallet",
+    "category": "essential",
+    "id": 46,
+    "goodForWallet": true,
+    "price": 56
+  },
+  {
+    "item": "Biodegradable Dog Poop Bags",
+    "category": "essential",
+    "id": 47,
+    "goodForWallet": true,
+    "price": 41
+  },
+  {
+    "item": "Eco-friendly Watch",
+    "category": "luxury",
+    "id": 48,
+    "goodForWallet": false,
+    "price": 42
+  },
+  {
+    "item": "Organic Spice Set",
+    "category": "daily usage",
+    "id": 49,
+    "goodForWallet": true,
+    "price": 99
+  },
+  {
+    "item": "Bamboo Smartphone Stand",
+    "category": "occasional use",
+    "id": 50,
+    "goodForWallet": false,
+    "price": 85
+  }
+]
