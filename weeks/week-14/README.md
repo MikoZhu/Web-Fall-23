@@ -4,6 +4,8 @@ Welcome to the world of backend development!
 
 As an intro student taking your first steps into backend world, you'll soon encounter two essential tools: MongoDB and Mongoose.
 
+[Amazing Tutorial](https://www.youtube.com/watch?v=-0exw-9YJBo&t=665s&ab_channel=TraversyMedia)
+
 ## What is MongoDB?
 
 MongoDB is a popular NoSQL (Not Only SQL) database management system that stores and manages data in a flexible, document-oriented format. Unlike traditional relational databases, MongoDB uses a schema-less data model, allowing you to store and retrieve data in a more dynamic and unstructured way. It is designed to handle large volumes of data and is often used for web applications, big data, and real-time applications.
