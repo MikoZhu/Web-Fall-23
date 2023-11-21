@@ -32,6 +32,8 @@ MongoDB is a popular NoSQL (Not Only SQL) database management system that stores
 
 4.  CRUD Operations: MongoDB supports CRUD operations (Create, Read, Update, Delete) for manipulating documents. You can insert, query, update, and delete documents using MongoDB's API.
 
+Advancedd Features - Not covered in class - good that you know about them
+
 5.  Indexes: MongoDB uses indexes to speed up query execution. You can define indexes on specific fields to optimize queries.
 
 6.  Replication: MongoDB offers data replication for high availability. It replicates data across multiple servers to ensure data durability and fault tolerance.
@@ -44,7 +46,7 @@ In summary, MongoDB is a NoSQL database that stores data as flexible, document-o
 
 ## What is Mongoose?
 
-Mongoose is an Object Data Modeling (ODM) library for MongoDB, a popular NoSQL database. It provides a structured way to interact with MongoDB from a Node.js application. Essentially, Mongoose acts as an intermediary layer between your Node.js application and MongoDB, allowing you to work with MongoDB data using JavaScript objects and schemas.
+Mongoose is an Object Data Modeling (ODM) library for MongoDB, a popular NoSQL database. It provides a structured way to interact with MongoDB from a Node.js application. Essentially, Mongoose acts as an intermediary layer between your Node.js 9server.js to be exact ;) ) application and MongoDB, allowing you to work with MongoDB data using JavaScript objects and schemas.
 
 ### Why Use Mongoose?
 
