@@ -6,6 +6,8 @@ import mongoose from "mongoose"; // Import Mongoose, an ODM for MongoDB
 import dotenv from "dotenv"; // Import dotenv for environment variables
 dotenv.config(); // Load environment variables from the .env file
 import taskRoutes from "./routes/taskRoutes";
+import userRoutes from "./routes/userRoutes";
+import { connectDB } from "./config/db";
 
 // Defines the port the app will run on. Defaults to 8080, but can be overridden
 const port = process.env.PORT || 3000; // Set the port number for the server
@@ -19,14 +21,19 @@ app.use(express.urlencoded({ extended: false })); // Parse URL-encoded data
 // Use the routes for handling the API REquests!
 // LATER
 app.use(taskRoutes);
+app.use(userRoutes);
 // ---
 // ---
 // ---
 
-// Connection to the database through Mongoose (for local development)
-const mongoUrl = process.env.MONGO_URL; // Get the MongoDB connection URL from environment variables
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true }); // Connect to the MongoDB database
-mongoose.Promise = Promise; // Set Mongoose to use ES6 Promises
+// Connection to the database through Mongoose (commented out in this version)
+connectDB();
+
+// THIS IS NOW LIVING INSIDE THE db.js file within the config folder, its now connecting through line 30 ;)
+// // Connection to the database through Mongoose (for local development)
+// const mongoUrl = process.env.MONGO_URL; // Get the MongoDB connection URL from environment variables
+// mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true }); // Connect to the MongoDB database
+// mongoose.Promise = Promise; // Set Mongoose to use ES6 Promises
 
 // ---
 // ---
