@@ -6,10 +6,6 @@ As an intro student taking your first steps into backend world, you'll soon enco
 
 [Amazing Tutorial](https://www.youtube.com/watch?v=-0exw-9YJBo&t=665s&ab_channel=TraversyMedia)
 
-### .env file key + value example
-
-`MONGO_URL=mongodb://127.0.0.1:27017/tasks-app`
-
 ## What is MongoDB?
 
 MongoDB is a popular NoSQL (Not Only SQL) database management system that stores and manages data in a flexible, document-oriented format. Unlike traditional relational databases, MongoDB uses a schema-less data model, allowing you to store and retrieve data in a more dynamic and unstructured way. It is designed to handle large volumes of data and is often used for web applications, big data, and real-time applications.
@@ -99,3 +95,51 @@ In simple terms, MongoDB is the place where you store your data, while Mongoose 
 ![Giphy Animation](https://media.giphy.com/media/PG1nBLxrY8ZlS08pTh/giphy.gif)
 
 ### Important Commands
+
+## Class Reading - Tuesday 28 November 2024
+
+Welcome to another exciting journey in the world of backend development!
+
+Today, we're going to explore three critical components of a MongoDB-Express-Node (often referred to as MEN) application: the Controller, Middleware, and Config folders. Using the warehouse analogy we're familiar with. Understanding these components is akin to knowing the different roles and areas in a warehouse, ensuring everything runs smoothly and efficiently.
+
+### Controller Folder: The Warehouse Managers
+
+In our MEN application warehouse, the Controller folder represents the warehouse managers. These managers (controllers) are responsible for overseeing specific sections of the warehouse (application). They organize and direct how items (data and requests) are handled and processed.
+
+#### Key Points about Controller Folder:
+
+1.  Handling Requests: Controllers manage incoming requests, like warehouse managers receiving goods.
+
+2.  Processing Logic: They process these requests, akin to managers deciding how and where to store the goods.
+
+3.  Sending Responses: Controllers send back responses, similar to managers dispatching items from the warehouse to their destinations.
+
+4.  Organized Management: Having a dedicated Controller folder ensures that each part of your application is managed efficiently, much like having managers for different sections of a warehouse.
+
+### Middleware Folder: The Quality Control Inspectors
+
+In the warehouse analogy, Middleware functions are like the quality control inspectors. They check and verify everything that comes in (requests) and goes out (responses) of the warehouse. Middleware ensures that everything meets the required standards before reaching the warehouse managers (controllers).
+
+#### Key Points about Middleware Folder:
+
+1.  Inspecting Requests: Middleware inspects incoming requests, like inspectors checking goods on arrival.
+
+2.  Validation and Authentication: They handle tasks like validating data or authenticating users, akin to inspectors ensuring goods meet quality standards.
+
+3.  Error Handling: Middleware also deals with errors, similar to inspectors identifying and addressing issues with incoming goods.
+
+### Config Folder: The Warehouse Administration Office
+
+The Config folder in our MEN application is analogous to the administration office in a warehouse. This office (folder) contains all the essential configurations and settings that determine how the warehouse operates, such as database connections, environmental variables, and other operational settings.
+
+#### Key Points about Config Folder:
+
+1.  Operational Settings: It manages crucial settings for the application, like an office managing warehouse operations.
+
+2.  Database Connections: Similar to keeping records of inventory and transactions, this folder contains information for connecting to your MongoDB database.
+
+3.  Environment Variables: It stores environment variables, which are like the operational guidelines the warehouse follows, varying based on different circumstances (development, testing, production).
+
+4.  Security: Keeping sensitive information in the Config folder is like storing important documents in a secure office, ensuring operational integrity and security.
+
+In summary, understanding the Controller, Middleware, and Config folders in a MEN application is like knowing the roles and areas in a warehouse. Controllers are the managers organizing and processing items, Middleware functions are the inspectors ensuring quality and compliance, and the Config folder is the administration office managing the operational details. This structure ensures that your application, like a well-run warehouse, operates efficiently, securely, and effectively.
