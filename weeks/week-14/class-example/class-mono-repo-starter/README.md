@@ -8,7 +8,7 @@ As an intro student taking your first steps into backend world, you'll soon enco
 
 ## BACKEND .ENV FILE EXAMPLE
 
-MONGO_URL=mongodb://127.0.0.1:27017/tasks-app
+MONGO_URL=mongodb://127.0.0.1:27017/tasks-app <br />
 JWT_SECRET=turtles
 
 ## What is MongoDB?
