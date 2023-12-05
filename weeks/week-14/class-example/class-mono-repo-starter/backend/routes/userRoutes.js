@@ -1,16 +1,16 @@
+// Import necessary libraries and modules
 import express from "express";
-import { UserModel } from "../models/User";
 // bcrypt: We use bcrypt to securely hash and store passwords in our database. Storing plain-text passwords is a security risk, as it exposes user credentials in case of a data breach. bcrypt helps us hash passwords in a way that is computationally expensive and time-consuming for potential attackers, making it difficult to crack passwords even if the database is compromised. It enhances the overall security of user authentication in our application.
 import bcrypt from "bcrypt";
 // jwt (JSON Web Tokens): We use jwt for authentication and authorization. It allows us to create and verify tokens that contain user identity information, such as user IDs or roles. These tokens are often sent with requests to secure routes and verify that a user has the necessary permissions to access certain resources. JWTs are stateless and efficient, making them a popular choice for secure communication between the client and server.
 import jwt from "jsonwebtoken";
-//asyncHandler: We use asyncHandler to simplify error handling in asynchronous code. It helps us avoid writing repetitive try-catch blocks by automatically catching errors and passing them to our error handling middleware. This makes our code cleaner and more readable, reducing the risk of unhandled exceptions that could crash the server...
+import { UserModel } from "../models/UserModel"; // Adjust the path according to your project structure
+// asyncHandler: We use asyncHandler to simplify error handling in asynchronous code. It helps us avoid writing repetitive try-catch blocks by automatically catching errors and passing them to our error handling middleware. This makes our code cleaner and more readable, reducing the risk of unhandled exceptions that could crash the server.
 import asyncHandler from "express-async-handler";
 import dotenv from "dotenv"; // Import dotenv for environment variables
 dotenv.config(); // Load environment variables from the .env file
 
 // Create an instance of the Express router
-// The router method in this code is like setting up a map or a blueprint for handling different kinds of requests in a web application. It helps organize and define how the application should respond when someone visits different URLs. Think of it as creating a list of instructions for the app to follow when it receives specific requests, like "show me all tasks" or "register a new user." This makes the code neat and helps the app know what to do when someone interacts with it.
 const router = express.Router();
 
 // Function to generate a JWT token for user authentication
@@ -21,7 +21,6 @@ const generateToken = (user) => {
   });
 };
 
-// USER REGISTRATION ROUTE
 // REGISTER ROUTE: Handle user registration
 router.post(
   "/register",
@@ -76,7 +75,7 @@ router.post(
           username: newUser.username,
           email: newUser.email,
           id: newUser._id,
-          accessToken: generateToken(newUser._id), // Generate a JWT token for the new user using the user Id :)
+          accessToken: newUser.accessToken, // Generate a JWT token for the new user using the acessToken generated from the model
         },
       });
     } catch (e) {
@@ -86,11 +85,10 @@ router.post(
   })
 );
 
-// LOGIN ROUTE
-
 // LOGIN ROUTE: Handle user login
 router.post(
   "/login",
+  //authenticateUser, // Use authenticateUser middleware here
   asyncHandler(async (req, res) => {
     // Extract username and password from the request body
     const { username, password } = req.body;
@@ -120,7 +118,7 @@ router.post(
         response: {
           username: user.username,
           id: user._id,
-          accessToken: generateToken(user._id), // Generate a JWT token for the new user using the user Id :)
+          accessToken: user.accessToken, // Generate a JWT token for the new user using the accessToken :)
         },
       });
     } catch (e) {
@@ -132,3 +130,8 @@ router.post(
 
 // Export the router for use in the main application
 export default router;
+
+// In this code, we have defined two routes for a user authentication system in a Node.js Express application: a registration route (/register) and a login route (/login).
+// The registration route allows users to create a new account by providing a username and password. The code checks if a user with the same username already exists, hashes the password, and then creates a new user in the database. After successfully registering the user, a JWT token is generated and returned in the response.
+// The login route allows users to authenticate by providing their username and password. The code searches for the user by username, verifies the password, and if successful, generates a JWT token for the user and returns it in the response.
+// Overall, this code sets up user registration and login functionality with password hashing and JWT token generation for authentication.

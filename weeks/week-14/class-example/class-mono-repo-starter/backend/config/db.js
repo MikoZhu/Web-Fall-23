@@ -1,6 +1,5 @@
 // Import the 'mongoose' library to work with MongoDB
 import mongoose from "mongoose";
-import asyncHandler from "express-async-handler";
 
 // Import the 'dotenv' library to load environment variables from a .env file
 import dotenv from "dotenv";
@@ -8,7 +7,8 @@ import dotenv from "dotenv";
 // Load environment variables from the .env file
 dotenv.config();
 
-export const connectDB = asyncHandler(async () => {
+// Define an asynchronous function 'connectDB' to connect to the MongoDB database
+export const connectDB = async () => {
   try {
     // Attempt to connect to the MongoDB database using the URL from the environment variables
     // Mongoose Method: mongoose.connect()
@@ -24,7 +24,7 @@ export const connectDB = asyncHandler(async () => {
     // Exit the Node.js process with an exit code of 1 to indicate an error
     process.exit(1);
   }
-});
+};
 
 // In summary, this code does the following:
 

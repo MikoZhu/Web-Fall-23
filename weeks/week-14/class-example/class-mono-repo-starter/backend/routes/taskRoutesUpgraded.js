@@ -1,4 +1,5 @@
 import express from "express";
+import { authenticateUser } from "../middleware/authenticateUser";
 import {
   getTasksController,
   updateTaskController,
@@ -11,7 +12,7 @@ import {
 const router = express.Router();
 
 // Define a route for handling GET requests to retrieve all tasks
-router.get("/get", getTasksController);
+router.get("/get", authenticateUser, getTasksController);
 
 // Define a route for handling PUT requests to update a specific task by ID
 router.put("/update/:id", updateTaskController);
@@ -23,7 +24,7 @@ router.delete("/deleteAll", deleteAllTasksController);
 router.delete("/delete/:id", deleteSpecificTaskController);
 
 // Define a route for handling POST requests to add a new task
-router.post("/add", addTaskController);
+router.post("/add", authenticateUser, addTaskController);
 
 // Export the router for use in the main application
 export default router;

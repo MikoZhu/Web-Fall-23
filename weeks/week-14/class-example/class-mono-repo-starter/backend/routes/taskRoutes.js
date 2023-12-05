@@ -1,7 +1,10 @@
 import express from "express";
-import { TaskModel } from "../models/Task";
-//asyncHandler: We use asyncHandler to simplify error handling in asynchronous code. It helps us avoid writing repetitive try-catch blocks by automatically catching errors and passing them to our error handling middleware. This makes our code cleaner and more readable, reducing the risk of unhandled exceptions that could crash the server...
+import { TaskModel } from "../models/TaskModel";
+// asyncHandler: We use asyncHandler to simplify error handling in asynchronous code. It helps us avoid writing repetitive try-catch blocks by automatically catching errors and passing them to our error handling middleware. This makes our code cleaner and more readable, reducing the risk of unhandled exceptions that could crash the server.
 import asyncHandler from "express-async-handler";
+// NOT USED YET TBD
+import { authenticateUser } from "../middleware/authenticateUser";
+import { UserModel } from "../models/UserModel"; // Adjust the path according to your project structure
 
 // Create an instance of the Express router
 // The router method in this code is like setting up a map or a blueprint for handling different kinds of requests in a web application. It helps organize and define how the application should respond when someone visits different URLs. Think of it as creating a list of instructions for the app to follow when it receives specific requests, like "show me all tasks" or "register a new user." This makes the code neat and helps the app know what to do when someone interacts with it.
@@ -20,10 +23,14 @@ const router = express.Router();
 // Define a route for handling GET requests to retrieve tasks belonging to the user
 router.get(
   "/get",
+  authenticateUser,
   asyncHandler(async (req, res) => {
     // Use the TaskModel to find all tasks associated with the logged-in user
-    //const userId = req.user._id; // Get the user's ID from the request
-    await TaskModel.find()
+    const accessToken = req.header("Authorization");
+    console.log(accessToken);
+    const user = await UserModel.findOne({ accessToken: accessToken });
+    await TaskModel.find({ user: user })
+      .sort("-createdAt")
       .then((result) => res.json(result)) // Respond with the found tasks in JSON format
       .catch((err) => res.json(err)); // Handle any errors that occur during the operation
   })
@@ -88,19 +95,43 @@ router.delete(
 );
 
 // Define a route for handling POST requests to add a new task
+// router.post(
+//   "/add",
+//   asyncHandler(async (req, res) => {
+//     // Extract the task data from the request body
+//     const task = req.body.task;
+//     // Use TaskModel to create a new task with the provided data
+//     // Mongoose Method: TaskModel.create({ task: task })
+//     // Description: This route handles HTTP POST requests and is used to add a new task to the database. It extracts the task data from the request body and then uses the create() method, which is a Mongoose method, to create a new task document with the provided data. The newly created task is then responded to the client in JSON format.
+//     await TaskModel.create({
+//       task: task,
+//     })
+//       .then((result) => res.json(result)) // Respond with the newly created task in JSON format
+//       .catch((err) => res.json(err)); // Handle any errors that occur during the operation
+//   })
+// );
+
+// ROUTE 2 - TESTING
+// Define a route for handling POST requests to add a new task
 router.post(
   "/add",
+  authenticateUser,
   asyncHandler(async (req, res) => {
-    // Extract the task data from the request body
-    const task = req.body.task;
-    // Use TaskModel to create a new task with the provided data
-    // Mongoose Method: TaskModel.create({ task: task })
-    // Description: This route handles HTTP POST requests and is used to add a new task to the database. It extracts the task data from the request body and then uses the create() method, which is a Mongoose method, to create a new task document with the provided data. The newly created task is then responded to the client in JSON format.
-    await TaskModel.create({
-      task: task,
-    })
-      .then((result) => res.json(result)) // Respond with the newly created task in JSON format
-      .catch((err) => res.json(err)); // Handle any errors that occur during the operation
+    try {
+      // Extract the task data from the request body
+      const { task } = req.body;
+      const accessToken = req.header("Authorization");
+      const user = await UserModel.findOne({ accessToken: accessToken });
+      // Create a new task document with the provided data
+      // const newTask = await TaskModel.create(taskData, { user: user._id });
+
+      const newTaskTwo = new TaskModel({ task: task, user: user }).save();
+      // Respond with the newly created task in JSON format
+      res.json(newTaskTwo);
+    } catch (err) {
+      // Handle any errors that occur during the operation
+      res.status(500).json(err);
+    }
   })
 );
 

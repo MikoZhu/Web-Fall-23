@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { taskStore } from "../stores/taskStore";
+import { userStore } from "../stores/userStore";
 
 export const CreateTask = () => {
   const [task, setTask] = useState("");
