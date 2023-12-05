@@ -16,11 +16,10 @@ export const Tasks = () => {
 
   const { tasks, deleteAllTasks, fetchTasks, handleEdit, deleteTaskById } =
     taskStore();
-  const { accessToken } = userStore();
 
   useEffect(() => {
     fetchTasks();
-  }, [tasks, accessToken]);
+  }, [tasks]);
 
   const navigate = useNavigate();
   const storeHandleLogout = userStore((state) => state.handleLogout);

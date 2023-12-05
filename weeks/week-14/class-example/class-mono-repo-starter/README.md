@@ -6,6 +6,11 @@ As an intro student taking your first steps into backend world, you'll soon enco
 
 [Amazing Tutorial](https://www.youtube.com/watch?v=-0exw-9YJBo&t=665s&ab_channel=TraversyMedia)
 
+## BACKEND .ENV FILE EXAMPLE
+
+MONGO_URL=mongodb://127.0.0.1:27017/tasks-app <br />
+JWT_SECRET=turtles
+
 ## What is MongoDB?
 
 MongoDB is a popular NoSQL (Not Only SQL) database management system that stores and manages data in a flexible, document-oriented format. Unlike traditional relational databases, MongoDB uses a schema-less data model, allowing you to store and retrieve data in a more dynamic and unstructured way. It is designed to handle large volumes of data and is often used for web applications, big data, and real-time applications.
@@ -143,5 +148,3 @@ The Config folder in our MEN application is analogous to the administration offi
 4.  Security: Keeping sensitive information in the Config folder is like storing important documents in a secure office, ensuring operational integrity and security.
 
 In summary, understanding the Controller, Middleware, and Config folders in a MEN application is like knowing the roles and areas in a warehouse. Controllers are the managers organizing and processing items, Middleware functions are the inspectors ensuring quality and compliance, and the Config folder is the administration office managing the operational details. This structure ensures that your application, like a well-run warehouse, operates efficiently, securely, and effectively.
-
-test

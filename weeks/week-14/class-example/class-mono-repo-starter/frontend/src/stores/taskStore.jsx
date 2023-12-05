@@ -1,18 +1,13 @@
 import { create } from "zustand";
-import { userStore } from "./userStore";
-
-const apiEnv = import.meta.env.VITE_BACKEND_API;
-console.log(apiEnv);
 
 export const taskStore = create((set) => ({
   tasks: [],
-  userId: userStore.userId,
   addTask: (newTask) => set((state) => ({ tasks: [...state.tasks, newTask] })),
   setTasks: (tasks) => set({ tasks }),
   // New action to delete all tasks
   deleteAllTasks: async () => {
     try {
-      const response = await fetch(`${apiEnv}/deleteAll`, {
+      const response = await fetch("http://localhost:3000/deleteAll", {
         method: "DELETE",
       });
       if (response.ok) {
@@ -27,12 +22,7 @@ export const taskStore = create((set) => ({
   // New action to fetch tasks
   fetchTasks: async () => {
     try {
-      const response = await fetch(`${apiEnv}/get`, {
-        method: "GET",
-        headers: {
-          Authorization: localStorage.getItem("accessToken"),
-        },
-      });
+      const response = await fetch("http://localhost:3000/get");
       if (response.ok) {
         const data = await response.json();
         set({ tasks: data });
@@ -46,10 +36,9 @@ export const taskStore = create((set) => ({
   // New action to add a task to the server and then to the store
   addTaskToServer: async (task) => {
     try {
-      const response = await fetch(`${apiEnv}/add`, {
+      const response = await fetch("http://localhost:3000/add", {
         method: "POST",
         headers: {
-          Authorization: localStorage.getItem("accessToken"),
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ task: task }),
@@ -67,10 +56,34 @@ export const taskStore = create((set) => ({
       console.error(error);
     }
   },
+  // New action to add a task to the server and then to the store
+  addTaskToServerNEW: async (task) => {
+    try {
+      const response = await fetch("http://localhost:3000/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ task: task }),
+      });
+      const data = await response.json();
+
+      if (response.ok) {
+        set((state) => ({
+          tasks: [...state.tasks, { task: data.task, _id: data._id }], // Adjust the structure
+        }));
+        // ...
+      } else {
+        console.error("Failed to add task");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  },
   // New action to update the boolean is done value in the store -
   handleEdit: async (id) => {
     try {
-      const response = await fetch(`${apiEnv}/update/${id}`, {
+      const response = await fetch(`http://localhost:3000/update/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -96,7 +109,7 @@ export const taskStore = create((set) => ({
   // New action to ddelete the specific task by its id
   deleteTaskById: async (id) => {
     try {
-      const response = await fetch(`${apiEnv}/delete/${id}`, {
+      const response = await fetch(`http://localhost:3000/delete/${id}`, {
         method: "DELETE",
       });
 

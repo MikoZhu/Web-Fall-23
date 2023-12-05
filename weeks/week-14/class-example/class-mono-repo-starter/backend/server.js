@@ -4,7 +4,6 @@ import cors from "cors"; // Import the CORS middleware
 import mongoose from "mongoose"; // Import Mongoose, an ODM for MongoDB
 import dotenv from "dotenv"; // Import dotenv for environment variables
 dotenv.config(); // Load environment variables from the .env file
-// DIEGO -- IMPORT After Creating!
 import taskRoutes from "./routes/taskRoutes"; // Import custom task routes
 import userRoutes from "./routes/userRoutes"; // Import custom user routes
 import taskRoutesUpgraded from "./routes/taskRoutesUpgraded"; // Import custom task controlled-routes

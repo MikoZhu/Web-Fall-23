@@ -1,22 +1,14 @@
 import { TaskModel } from "../models/TaskModel";
 //asyncHandler: We use asyncHandler to simplify error handling in asynchronous code. It helps us avoid writing repetitive try-catch blocks by automatically catching errors and passing them to our error handling middleware. This makes our code cleaner and more readable, reducing the risk of unhandled exceptions that could crash the server.
 import asyncHandler from "express-async-handler";
-// We need to import the userModel to check for the famous accesstoken
-import { UserModel } from "../models/UserModel";
 
 // desciption: Get Tasks
 // route: /get
 // access: Private
 export const getTasksController = asyncHandler(async (req, res) => {
-  // Extract the accessToken from the request object, but it is not going to be from the req.body but, its going to be from the req.header
-  const accessToken = req.header("Authorization"); // we are requesting the Authorization key from the headerObject
-  // get the user and matchIt with the user from the db - remmeber that we are using the accessToken to do so :)
-  const userFromStorage = await UserModel.findOne({
-    accessToken: accessToken,
-  });
   // Use the TaskModel to find all tasks associated with the logged-in user
-  await TaskModel.find({ user: userFromStorage })
-    .sort("-createdAt")
+  //const userId = req.user._id; // Get the user's ID from the request
+  await TaskModel.find()
     .then((result) => res.json(result)) // Respond with the found tasks in JSON format
     .catch((err) => res.json(err)); // Handle any errors that occur during the operation
 });
@@ -25,24 +17,14 @@ export const getTasksController = asyncHandler(async (req, res) => {
 // route: /add
 // access: Private
 export const addTaskController = asyncHandler(async (req, res) => {
-  try {
-    // Extract the task data from the request body
-    const { task } = req.body;
-    // Extract the accessToken from the request object, but it is not going to be from the req.body but, its going to be from the req.header
-    const accessToken = req.header("Authorization"); // we are requesting the Authorization key from the headerObject
-    // get the user and matchIt with the user from the db - remmeber that we are using the accessToken to do so :)
-    const userFromStorage = await UserModel.findOne({
-      accessToken: accessToken,
-    });
-    // Define var to pass new task
-    const newTask = new TaskModel({
-      task: task,
-      user: userFromStorage,
-    }).save();
-    res.json(newTask);
-  } catch (error) {
-    res.status(500).json(error);
-  }
+  // Extract the task data from the request body
+  const task = req.body.task;
+  // Use TaskModel to create a new task with the provided data
+  await TaskModel.create({
+    task: task,
+  })
+    .then((result) => res.json(result)) // Respond with the newly created task in JSON format
+    .catch((err) => res.json(err)); // Handle any errors that occur during the operation
 });
 
 // desciption: PUT/PATCH a specific task to mark it complete
