@@ -7,6 +7,8 @@ dotenv.config(); // Load environment variables from the .env file
 // DIEGO -- IMPORT After Creating!
 import taskRoutes from "./routes/taskRoutes"; // Import custom task routes
 import userRoutes from "./routes/userRoutes"; // Import custom user routes
+import taskRoutesUpgraded from "./routes/taskRoutesUpgraded"; // Import custom task controlled-routes
+import userRoutesUpgraded from "./routes/userRoutesUpgraded"; // Import custom user routes
 import { connectDB } from "./config/db"; // Import database connection function (not used here)
 
 // Defines the port the app will run on. Defaults to 8080, but can be overridden
@@ -19,8 +21,14 @@ app.use(express.json()); // Parse incoming JSON data
 app.use(express.urlencoded({ extended: false })); // Parse URL-encoded data
 
 // Use the routes for handling API requests
-app.use(taskRoutes); // Use the task routes for task-related requests
-app.use(userRoutes); // Use the user routes for user-related requests
+
+// ROUTES - These routes DO NOT USE controller functions ;)
+// app.use(taskRoutes); // Use the task routes for task-related requests
+// app.use(userRoutes); // Use the user routes for user-related requests
+
+// ROUTES - These routes USE controller functions ;)
+app.use(taskRoutesUpgraded); // Use the task-controlled routes for task-related requests
+app.use(userRoutesUpgraded); // Use the user-controlled routes for user-related requests
 
 // Connection to the database through Mongoose (commented out in this version)
 connectDB();

@@ -21,6 +21,14 @@ import jwt from "jsonwebtoken";
 // -----------------------
 // -----------------------
 
+// Function to generate a JWT token for user authentication
+const generateToken = (user) => {
+  // Generate a JWT token containing the user's unique ID, with an optional secret key and a 24-hour expiration time
+  return jwt.sign({ accessToken: user.accessToken }, process.env.JWT_SECRET, {
+    expiresIn: "24h", // Token expires in 24 hours
+  });
+};
+
 // Actual Functions here
 
 // -----------------------
@@ -81,7 +89,10 @@ export const registerUserController = asyncHandler(async (req, res) => {
         username: newUser.username,
         email: newUser.email,
         id: newUser._id,
-        accessToken: generateToken(newUser._id), // Generate a JWT token for the new user using the user Id :)
+        // OLD
+        // accessToken: generateToken(newUser.accessToken), // Generate a JWT token for the new user using the user Id :)
+        // NEW
+        accessToken: newUser.accessToken, // Generate a JWT token for the new user using the acessToken generated from the model
       },
     });
   } catch (e) {
@@ -89,14 +100,6 @@ export const registerUserController = asyncHandler(async (req, res) => {
     res.status(500).json({ success: false, response: e.message });
   }
 });
-
-// Function to generate a JWT token for user authentication
-const generateToken = (user) => {
-  // Generate a JWT token containing the user's unique ID, with an optional secret key and a 24-hour expiration time
-  return jwt.sign({ id: user._id }, process.env.JWT_SECRET || "turtles", {
-    expiresIn: "24h", // Token expires in 24 hours
-  });
-};
 
 // -----------------------
 // -----------------------
@@ -134,7 +137,10 @@ export const loginUserController = asyncHandler(async (req, res) => {
       response: {
         username: user.username,
         id: user._id,
-        accessToken: generateToken(user._id), // Generate a JWT token for the new user using the user Id :)
+        // OLD
+        //accessToken: generateToken(user.accessToken), // Generate a JWT token for the new user using the user Id :)
+        // NEW
+        accessToken: user.accessToken, //  token for the user using the acessToken generated from the model
       },
     });
   } catch (e) {
